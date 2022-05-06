@@ -226,17 +226,15 @@ jobs:
         id: k8s-namespace
         run: echo "::set-output name=namespace::$(kubectl get namespace ${{ steps.prepare.outputs.namespace }} 2> /dev/null)"
       # Release name MUST start with a letter
-      # GitHub doesn't support multilines environment variables (JWT_*_KEY)
       - name: Deploy in new namespace
         if: steps.k8s-namespace.outputs.namespace == ''
         run: |
-          JWT_PASSPHRASE=$(openssl rand -base64 32)
-          JWT_SECRET_KEY=$(openssl genpkey -pass file:<(echo "$JWT_PASSPHRASE") -aes256 -algorithm rsa -pkeyopt rsa_keygen_bits:4096)
           helm upgrade ${{ steps.prepare.outputs.release }} ./helm/api-platform \
             --reuse-values \
             --install \
             --create-namespace \
             --namespace=${{ steps.prepare.outputs.namespace }} \
+            --set=keycloak.externalDatabase.host=${{ steps.prepare.outputs.namespace }}-postgres-keycloak \
             --set=app.version=${{ github.sha }} \
             --set=php.image.repository=eu.gcr.io/${{ secrets.GKE_PROJECT }}/php \
             --set=php.image.tag=${{ needs.build-php.outputs.version }} \
@@ -253,9 +251,6 @@ jobs:
             --set=external-dns.cloudflare.apiToken=${{ secrets.CF_API_TOKEN }} \
             --set=external-dns.domainFilters={"${{ steps.prepare.outputs.host }}"} \
             --set=external-dns.zoneIdFilters={${{ secrets.CF_ZONE_ID }}} \
-            --set=php.jwt.secretKey="$JWT_SECRET_KEY" \
-            --set=php.jwt.publicKey="$(openssl pkey -in <(echo "$JWT_SECRET_KEY") -passin file:<(echo "$JWT_PASSPHRASE") -pubout)" \
-            --set=php.jwt.passphrase=$JWT_PASSPHRASE \
             --set=php.corsAllowOrigin="${{ steps.prepare.outputs.cors }}" \
             --set=php.host=${{ steps.prepare.outputs.host }} \
             --set=mercure.publicUrl=https://${{ steps.prepare.outputs.host }}/.well-known/mercure \
