@@ -18,7 +18,7 @@ use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-final class BookHandler implements MessageHandlerInterface
+final class BookHandler// implements MessageHandlerInterface
 {
     public function __construct(
         private IriConverterInterface $iriConverter,
