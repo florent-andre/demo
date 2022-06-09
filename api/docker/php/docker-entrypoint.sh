@@ -71,6 +71,10 @@ if [ "$1" = 'php-fpm' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 				[ -e "$vocabulary" ] || continue
 				echo "  - { uri: '$vocabulary', format: 'turtle' }" >> schema.yaml
 			done
+			for vocabulary in /srv/vocabularies_data/*.rdf; do
+				[ -e "$vocabulary" ] || continue
+				echo "  - { uri: '$vocabulary', format: 'rdfxml' }" >> schema.yaml
+			done
 			echo "allTypes: true" >> schema.yaml
 			vendor/bin/schema generate src/
 			bin/console cache:clear
