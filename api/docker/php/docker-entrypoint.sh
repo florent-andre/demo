@@ -53,10 +53,28 @@ if [ "$1" = 'php-fpm' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 			bin/console doctrine:migrations:migrate --no-interaction
 		fi
 
-		if [ "$APP_ENV" != 'prod' ]; then
+		if [ "$APP_ENV" != 'prod' ] && [ -z "$(ls -A /srv/vocabularies_data)" ]; then
 			echo "Load fixtures"
 			bin/console hautelook:fixtures:load --no-interaction
 			bin/console doctrine:database:create --env=test
+		fi
+
+		if [ -n "$(ls -A /srv/vocabularies_data)" ]; then
+			echo "Create files from RDF vocabularies"
+			rm -rf src/Entity/*
+			echo "vocabularies:" > schema.yaml
+			for vocabulary in /srv/vocabularies_data/*.jsonld; do
+				[ -e "$vocabulary" ] || continue
+				echo "  - { uri: '$vocabulary', format: 'jsonld' }" >> schema.yaml
+			done
+			for vocabulary in /srv/vocabularies_data/*.ttl; do
+				[ -e "$vocabulary" ] || continue
+				echo "  - { uri: '$vocabulary', format: 'turtle' }" >> schema.yaml
+			done
+			echo "allTypes: true" >> schema.yaml
+			vendor/bin/schema generate src/
+			bin/console cache:clear
+			bin/console doctrine:schema:update --force
 		fi
 	fi
 fi
