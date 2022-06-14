@@ -8374,12 +8374,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/schema-generator.git",
-                "reference": "5c7bb2f03640be1917f05e4cd40259cfb5e15ec6"
+                "reference": "fd77c343133dbb0418669843a76b449ebb2468f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/schema-generator/zipball/5c7bb2f03640be1917f05e4cd40259cfb5e15ec6",
-                "reference": "5c7bb2f03640be1917f05e4cd40259cfb5e15ec6",
+                "url": "https://api.github.com/repos/api-platform/schema-generator/zipball/fd77c343133dbb0418669843a76b449ebb2468f4",
+                "reference": "fd77c343133dbb0418669843a76b449ebb2468f4",
                 "shasum": ""
             },
             "require": {
@@ -8389,7 +8389,7 @@
                 "ext-json": "*",
                 "friendsofphp/php-cs-fixer": "^2.15 || ^3.0",
                 "league/html-to-markdown": "^5.0",
-                "nette/php-generator": "^3.6 || ^4.0",
+                "nette/php-generator": "^3.6 || ^4.0-dev",
                 "nette/utils": "^3.1 || ^4.0-dev",
                 "nikic/php-parser": "^4.13",
                 "php": ">=7.4",
@@ -8402,13 +8402,12 @@
                 "twig/twig": "^3.0"
             },
             "require-dev": {
-                "api-platform/core": "^v2.7.0-beta.1",
+                "api-platform/core": "^2.5",
                 "doctrine/orm": "^2.7",
                 "myclabs/php-enum": "^1.7",
                 "phpspec/prophecy-phpunit": "^2.0",
                 "phpstan/phpstan": "^1.2.0",
                 "symfony/doctrine-bridge": "^5.2 || ^6.0",
-                "symfony/finder": "^5.2 || ^6.0",
                 "symfony/phpunit-bridge": "^5.2 || ^6.0",
                 "symfony/serializer": "^5.2 || ^6.0",
                 "symfony/validator": "^5.2 || ^6.0"
@@ -8450,7 +8449,7 @@
                 "issues": "https://github.com/api-platform/schema-generator/issues",
                 "source": "https://github.com/api-platform/schema-generator/tree/main"
             },
-            "time": "2022-06-30T18:32:14+00:00"
+            "time": "2022-06-09T14:26:09+00:00"
         },
         {
             "name": "cebe/php-openapi",
