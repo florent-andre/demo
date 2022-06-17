@@ -63,6 +63,7 @@ if [ "$1" = 'php-fpm' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 			echo "Create files from RDF vocabularies"
 			rm -rf src/Entity/*
 			echo "vocabularies:" > schema.yaml
+			echo "  - { uri: 'https://schema.org/version/latest/schemaorg-current-https.rdf', format: null, allTypes: false }" >> schema.yaml
 			for vocabulary in /srv/vocabularies_data/*.jsonld; do
 				[ -e "$vocabulary" ] || continue
 				echo "  - { uri: '$vocabulary', format: 'jsonld' }" >> schema.yaml
@@ -73,9 +74,10 @@ if [ "$1" = 'php-fpm' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 			done
 			for vocabulary in /srv/vocabularies_data/*.rdf; do
 				[ -e "$vocabulary" ] || continue
-				echo "  - { uri: '$vocabulary', format: 'rdfxml' }" >> schema.yaml
+				echo "  - { uri: '$vocabulary', format: null }" >> schema.yaml
 			done
 			echo "allTypes: true" >> schema.yaml
+			echo "resolveTypes: true" >> schema.yaml
 			vendor/bin/schema generate src/
 			bin/console cache:clear
 			bin/console doctrine:schema:update --force
