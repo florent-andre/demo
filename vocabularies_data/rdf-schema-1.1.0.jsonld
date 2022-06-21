@@ -1,0 +1,725 @@
+{
+	"@context": {
+		"id": "@id",
+		"graph": {
+			"@id": "@graph",
+			"@container": "@set"
+		},
+		"type": {
+			"@id": "@type",
+			"@container": "@set"
+		},
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"first": {
+			"@id": "rdf:first",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"rest": {
+			"@id": "rdf:rest",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"sh": "https://www.w3.org/ns/shacl#",
+		"dct": "http://purl.org/dc/terms/",
+		"domain": {
+			"@id": "rdfs:domain",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"range": {
+			"@id": "rdfs:range",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"label": {
+			"@id": "rdfs:label",
+			"@container": "@set"
+		},
+		"comment": {
+			"@id": "rdfs:comment",
+			"@container": "@set"
+		},
+		"subClassOf": {
+			"@id": "rdfs:subClassOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"subPropertyOf": {
+			"@id": "rdfs:subPropertyOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"isDefinedBy": {
+			"@id": "rdfs:isDefinedBy",
+			"@container": "@set"
+		},
+		"seeAlso": {
+			"@id": "rdfs:seeAlso",
+			"@container": "@set"
+		},
+		"maxCount": {
+			"@id": "sh:maxCount",
+			"@type": "xsd:integer"
+		},
+		"minCount": {
+			"@id": "sh:minCount",
+			"@type": "xsd:integer"
+		},
+		"path": {
+			"@id": "sh:path",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"title": {
+			"@id": "dct:title",
+			"@container": "@set"
+		},
+		"description": {
+			"@id": "dct:description",
+			"@container": "@set"
+		},
+		"date": {
+			"@id": "dct:date",
+			"@container": "@set"
+		},
+		"owl": "http://www.w3.org/2002/07/owl#",
+		"inverseOf": {
+			"@id": "owl:inverseOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"disjointWith": {
+			"@id": "owl:disjointWith",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"unionOf": {
+			"@id": "owl:unionOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"versionInfo": {
+			"@id": "owl:versionInfo",
+			"@container": "@set"
+		},
+		"imports": {
+			"@id": "owl:imports",
+			"@container": "@set"
+		},
+		"versionIRI": {
+			"@id": "owl:versionIRI",
+			"@container": "@set"
+		},
+		"contributor": {
+			"@id": "dct:contributor",
+			"@container": "@set"
+		},
+		"creator": {
+			"@id": "dct:creator",
+			"@container": "@set"
+		},
+		"created": {
+			"@id": "dct:created",
+			"@container": "@set"
+		},
+		"modified": {
+			"@id": "dct:modified",
+			"@container": "@set"
+		},
+		"license": {
+			"@id": "dct:license",
+			"@container": "@set"
+		},
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"gendj": "https://gen.competencies.be/terms/digitalJobs/",
+		"inScheme": {
+			"@id": "skos:inScheme",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"prefLabel": {
+			"@id": "skos:prefLabel",
+			"@container": "@set"
+		},
+		"altLabel": {
+			"@id": "skos:altLabel",
+			"@container": "@set"
+		},
+		"narrower": {
+			"@id": "skos:narrower",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"broader": {
+			"@id": "skos:broader",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"member": {
+			"@id": "skos:member",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"definition": {
+			"@id": "skos:definition",
+			"@container": "@set"
+		},
+		"scopeNote": {
+			"@id": "skos:scopeNote",
+			"@container": "@set"
+		},
+		"example": {
+			"@id": "skos:example",
+			"@container": "@set"
+		},
+		"foaf": "http://xmlns.com/foaf/0.1/",
+		"mbox": {
+			"@id": "foaf:mbox",
+			"@container": "@set"
+		},
+		"qb": "http://purl.org/linked-data/cube#",
+		"dv": "http://www.w3.org/2003/g/data-view#",
+		"namespaceTransformation": {
+			"@id": "dv:namespaceTransformation",
+			"@container": "@set"
+		}
+	},
+	"graph": [
+		{
+			"id": "rdfs:Ontology",
+			"type": [
+				"owl:Ontology"
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "The RDF Schema vocabulary (RDFS)"
+				}
+			],
+			"seeAlso": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema-more"
+				}
+			]
+		},
+		{
+			"id": "rdfs:Class",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of classes."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Class"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "rdfs:Container",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of RDF containers."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Container"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "rdfs:ContainerMembershipProperty",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of container membership properties, rdf:_1, rdf:_2, ...,\n                    all of which are sub-properties of 'member'."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "ContainerMembershipProperty"
+				}
+			],
+			"subClassOf": [
+				"rdf:Property"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "rdfs:Datatype",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of RDF datatypes."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Datatype"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Class"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "rdfs:Literal",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of literal values, eg. textual strings and integers."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Literal"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "rdfs:Resource",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class resource, everything."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Resource"
+				}
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "rdfs:comment",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A description of the subject resource."
+				}
+			],
+			"domain": [
+				"rdfs:Resource"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "comment"
+				}
+			],
+			"range": [
+				"rdfs:Literal"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdfs:domain",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A domain of the subject property."
+				}
+			],
+			"domain": [
+				"rdf:Property"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "domain"
+				}
+			],
+			"range": [
+				"rdfs:Class"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdfs:isDefinedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The defininition of the subject resource."
+				}
+			],
+			"domain": [
+				"rdfs:Resource"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "isDefinedBy"
+				}
+			],
+			"range": [
+				"rdfs:Resource"
+			],
+			"subPropertyOf": [
+				"rdfs:seeAlso"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdfs:label",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A human-readable name for the subject."
+				}
+			],
+			"domain": [
+				"rdfs:Resource"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "label"
+				}
+			],
+			"range": [
+				"rdfs:Literal"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdfs:member",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A member of the subject resource."
+				}
+			],
+			"domain": [
+				"rdfs:Resource"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "member"
+				}
+			],
+			"range": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdfs:range",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A range of the subject property."
+				}
+			],
+			"domain": [
+				"rdf:Property"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "range"
+				}
+			],
+			"range": [
+				"rdfs:Class"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdfs:seeAlso",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Further information about the subject resource."
+				}
+			],
+			"domain": [
+				"rdfs:Resource"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "seeAlso"
+				}
+			],
+			"range": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdfs:subClassOf",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The subject is a subclass of a class."
+				}
+			],
+			"domain": [
+				"rdfs:Class"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "subClassOf"
+				}
+			],
+			"range": [
+				"rdfs:Class"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdfs:subPropertyOf",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The subject is a subproperty of a property."
+				}
+			],
+			"domain": [
+				"rdf:Property"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "subPropertyOf"
+				}
+			],
+			"range": [
+				"rdf:Property"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdfs:scheme_for_Class_generated",
+			"type": [
+				"skos:ConceptScheme",
+				"om:defaultScheme"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "Default scheme for Class - autogenerated"
+				},
+				{
+					"@language": "fr",
+					"@value": "Scheme par défault pour les Class - autogenéré"
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "Default Level"
+				},
+				{
+					"@language": "fr",
+					"@value": "Niveau par défaut"
+				}
+			]
+		},
+		{
+			"id": "rdfs:scheme_for_Property_generated",
+			"type": [
+				"skos:ConceptScheme",
+				"om:defaultScheme"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "Default scheme for Property - autogenerated"
+				},
+				{
+					"@language": "fr",
+					"@value": "Scheme par défault pour les Property - autogenéré"
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "Default Level"
+				},
+				{
+					"@language": "fr",
+					"@value": "Niveau par défaut"
+				}
+			]
+		}
+	]
+}
