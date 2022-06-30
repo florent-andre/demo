@@ -79,6 +79,7 @@ if [ "$1" = 'php-fpm' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 			echo "allTypes: true" >> schema.yaml
 			echo "resolveTypes: true" >> schema.yaml
 			echo "apiPlatformOldAttributes: true" >> schema.yaml
+			echo "relations: { defaultCardinality: '(1..*)' }" >> schema.yaml
 			vendor/bin/schema generate src/
 			bin/console cache:clear
 			bin/console doctrine:schema:update --force
