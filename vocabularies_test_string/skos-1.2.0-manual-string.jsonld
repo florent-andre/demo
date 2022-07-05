@@ -1,0 +1,692 @@
+{
+	"@context": {
+		"id": "@id",
+		"graph": {
+			"@id": "@graph",
+			"@container": "@set"
+		},
+		"type": {
+			"@id": "@type",
+			"@container": "@set"
+		},
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"first": {
+			"@id": "rdf:first",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"rest": {
+			"@id": "rdf:rest",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"sh": "https://www.w3.org/ns/shacl#",
+		"dct": "http://purl.org/dc/terms/",
+		"domain": {
+			"@id": "rdfs:domain",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"range": {
+			"@id": "rdfs:range",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"label": {
+			"@id": "rdfs:label",
+			"@container": "@set"
+		},
+		"comment": {
+			"@id": "rdfs:comment",
+			"@container": "@set"
+		},
+		"subClassOf": {
+			"@id": "rdfs:subClassOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"subPropertyOf": {
+			"@id": "rdfs:subPropertyOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"isDefinedBy": {
+			"@id": "rdfs:isDefinedBy",
+			"@container": "@set"
+		},
+		"seeAlso": {
+			"@id": "rdfs:seeAlso",
+			"@container": "@set"
+		},
+		"maxCount": {
+			"@id": "sh:maxCount",
+			"@type": "xsd:integer"
+		},
+		"minCount": {
+			"@id": "sh:minCount",
+			"@type": "xsd:integer"
+		},
+		"path": {
+			"@id": "sh:path",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"title": {
+			"@id": "dct:title",
+			"@container": "@set"
+		},
+		"description": {
+			"@id": "dct:description",
+			"@container": "@set"
+		},
+		"date": {
+			"@id": "dct:date",
+			"@container": "@set"
+		},
+		"owl": "http://www.w3.org/2002/07/owl#",
+		"inverseOf": {
+			"@id": "owl:inverseOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"disjointWith": {
+			"@id": "owl:disjointWith",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"unionOf": {
+			"@id": "owl:unionOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"contributor": {
+			"@id": "dct:contributor",
+			"@container": "@set"
+		},
+		"creator": {
+			"@id": "dct:creator",
+			"@container": "@set"
+		},
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"gendj": "https://gen.competencies.be/terms/digitalJobs/",
+		"inScheme": {
+			"@id": "skos:inScheme",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"prefLabel": {
+			"@id": "skos:prefLabel",
+			"@container": "@set"
+		},
+		"altLabel": {
+			"@id": "skos:altLabel",
+			"@container": "@set"
+		},
+		"narrower": {
+			"@id": "skos:narrower",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"broader": {
+			"@id": "skos:broader",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"member": {
+			"@id": "skos:member",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"definition": {
+			"@id": "skos:definition",
+			"@container": "@set"
+		},
+		"scopeNote": {
+			"@id": "skos:scopeNote",
+			"@container": "@set"
+		},
+		"example": {
+			"@id": "skos:example",
+			"@container": "@set"
+		}
+	},
+	"graph": [
+		{
+			"id": "_:b0_n0",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"unionOf": [
+				"_:b0_n3"
+			],
+			"inScheme": [
+				"skos:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "_:b0_n2",
+			"first": [
+				"skos:Collection"
+			],
+			"rest": [
+				"rdf:nill"
+			]
+		},
+		{
+			"id": "_:b0_n3",
+			"first": [
+				"skos:Concept"
+			],
+			"rest": [
+				"_:b0_n2"
+			]
+		},
+		{
+			"id": "skos:Ontology",
+			"type": [
+				"owl:Ontology"
+			],
+			"contributor": [
+				"Dave Beckett",
+				"Nikki Rogers",
+				"Participants in W3C's Semantic Web Deployment Working Group."
+			],
+			"creator": [
+				"Alistair Miles",
+				"Sean Bechhofer"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies."
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "SKOS Vocabulary"
+				}
+			],
+			"seeAlso": [
+				{
+					"id": "http://www.w3.org/TR/skos-reference/"
+				}
+			]
+		},
+		{
+			"id": "skos:Collection",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Collection"
+				}
+			],
+			"disjointWith": [
+				"skos:Concept",
+				"skos:ConceptScheme"
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "A meaningful collection of concepts."
+				}
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "Labelled collections can be used where you would like a set of concepts to be displayed under a 'node label' in the hierarchy."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "skos:Concept",
+			"type": [
+                "rdfs:Class",
+				"owl:Class"
+			],
+            "subClassOf": [
+                "rdfs:Resource"
+            ],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Concept"
+				}
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "An idea or notion; a unit of thought."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "skos:ConceptScheme",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Concept Scheme"
+				}
+			],
+			"disjointWith": [
+				"skos:Concept"
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "A set of concepts, optionally including statements about semantic relationships between those concepts."
+				}
+			],
+			"example": [
+				{
+					"@language": "en",
+					"@value": "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies."
+				}
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "A concept scheme may be defined to include concepts from different sources."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "skos:broader",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+            "domain": [
+				"skos:Concept"
+			],
+            "range": [
+				"skos:Concept"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "has broader"
+				}
+			],
+			"subPropertyOf": [
+				"skos:broaderTransitive"
+			],
+			"inverseOf": [
+				"skos:narrower"
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "Relates a concept to a concept that is more general in meaning."
+				}
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "skos:hasTopConcept",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"domain": [
+				"skos:ConceptScheme"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "has top concept"
+				}
+			],
+			"range": [
+				"skos:Concept"
+			],
+			"inverseOf": [
+				"skos:topConceptOf"
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "skos:inScheme",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is in scheme"
+				}
+			],
+			"range": [
+				"skos:ConceptScheme"
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "Relates a resource (for example a concept) to a concept scheme in which it is included."
+				}
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "A concept may be a member of more than one concept scheme."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "skos:member",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"domain": [
+				"skos:Collection"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "has member"
+				}
+			],
+			"range": [
+				"_:b0_n0"
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "Relates a collection to one of its members."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "skos:narrower",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "has narrower"
+				}
+			],
+			"subPropertyOf": [
+				"skos:narrowerTransitive"
+			],
+			"inverseOf": [
+				"skos:broader"
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "Relates a concept to a concept that is more specific in meaning."
+				}
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "skos:prefLabel",
+			"type": [
+				"rdf:Property",
+				"owl:AnnotationProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."
+				},
+				{
+					"@language": "en",
+					"@value": "The range of skos:prefLabel is the class of RDF plain literals."
+				},
+				{
+					"@language": "en",
+					"@value": "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise\n      disjoint properties."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "preferred label"
+				}
+			],
+            "domain": [
+                "skos:Concept"
+            ],
+            "range": [
+                "xsd:string"
+            ],
+			"subPropertyOf": [
+				"rdfs:label"
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "The preferred lexical label for a resource, in a given language."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "skos:semanticRelation",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is in semantic relation with"
+				}
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "Links a concept to a concept related by meaning."
+				}
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "skos:topConceptOf",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"domain": [
+				"skos:Concept"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is top concept in scheme"
+				}
+			],
+			"range": [
+				"skos:ConceptScheme"
+			],
+			"subPropertyOf": [
+				"skos:inScheme"
+			],
+			"inverseOf": [
+				"skos:hasTopConcept"
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "Relates a concept to the concept scheme that it is a top level concept of."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Property_generated"
+			]
+		},
+        {
+			"id": "skos:broaderTransitive",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty",
+				"owl:TransitiveProperty"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2004/02/skos/core"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "has broader transitive"
+				}
+			],
+			"subPropertyOf": [
+				"skos:semanticRelation"
+			],
+			"inverseOf": [
+				"skos:narrowerTransitive"
+			],
+			"definition": [
+				{
+					"@language": "en",
+					"@value": "skos:broaderTransitive is a transitive superproperty of skos:broader."
+				}
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."
+				}
+			],
+			"inScheme": [
+				"skos:scheme_for_Property_generated"
+			]
+		}
+	]
+}
