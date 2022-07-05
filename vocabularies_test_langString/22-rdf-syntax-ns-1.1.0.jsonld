@@ -1,0 +1,713 @@
+{
+	"@context": {
+		"id": "@id",
+		"graph": {
+			"@id": "@graph",
+			"@container": "@set"
+		},
+		"type": {
+			"@id": "@type",
+			"@container": "@set"
+		},
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"sh": "https://www.w3.org/ns/shacl#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"dct": "http://purl.org/dc/terms/",
+		"domain": {
+			"@id": "rdfs:domain",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"range": {
+			"@id": "rdfs:range",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"label": {
+			"@id": "rdfs:label",
+			"@container": "@set"
+		},
+		"comment": {
+			"@id": "rdfs:comment",
+			"@container": "@set"
+		},
+		"subClassOf": {
+			"@id": "rdfs:subClassOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"isDefinedBy": {
+			"@id": "rdfs:isDefinedBy",
+			"@container": "@set"
+		},
+		"seeAlso": {
+			"@id": "rdfs:seeAlso",
+			"@container": "@set"
+		},
+		"maxCount": {
+			"@id": "sh:maxCount",
+			"@type": "xsd:integer"
+		},
+		"minCount": {
+			"@id": "sh:minCount",
+			"@type": "xsd:integer"
+		},
+		"path": {
+			"@id": "sh:path",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"title": {
+			"@id": "dct:title",
+			"@container": "@set"
+		},
+		"description": {
+			"@id": "dct:description",
+			"@container": "@set"
+		},
+		"date": {
+			"@id": "dct:date",
+			"@container": "@set"
+		},
+		"owl": "http://www.w3.org/2002/07/owl#"
+	},
+	"graph": [
+		{
+			"id": "rdf:Ontology",
+			"type": [
+				"owl:Ontology"
+			],
+			"date": [
+				"2019-12-16"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts."
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "The RDF Concepts Vocabulary (RDF)"
+				}
+			]
+		},
+		{
+			"id": "rdf:HTML",
+			"type": [
+				"rdfs:Datatype"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The datatype of RDF literals storing fragments of HTML content"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "HTML"
+				}
+			],
+			"seeAlso": [
+				{
+					"id": "http://www.w3.org/TR/rdf11-concepts/#section-html"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Literal"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Datatype_generated"
+			]
+		},
+		{
+			"id": "rdf:JSON",
+			"type": [
+				"rdfs:Datatype"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The datatype of RDF literals storing JSON content."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "JSON"
+				}
+			],
+			"seeAlso": [
+				{
+					"id": "https://www.w3.org/TR/json-ld11/#the-rdf-json-datatype"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Literal"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Datatype_generated"
+			]
+		},
+		{
+			"id": "rdf:List",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of RDF Lists."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "List"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "rdf:PlainLiteral",
+			"type": [
+				"rdfs:Datatype"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of plain (i.e. untyped) literal values, as used in RIF and OWL 2"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "PlainLiteral"
+				}
+			],
+			"seeAlso": [
+				{
+					"id": "http://www.w3.org/TR/rdf-plain-literal/"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Literal"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Datatype_generated"
+			]
+		},
+		{
+			"id": "rdf:Property",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of RDF properties."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Property"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "rdf:Statement",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of RDF statements."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Statement"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "rdf:XMLLiteral",
+			"type": [
+				"rdfs:Datatype"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The datatype of XML literal values."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "XMLLiteral"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Literal"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Datatype_generated"
+			]
+		},
+		{
+			"id": "rdf:first",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The first item in the subject RDF list."
+				}
+			],
+			"domain": [
+				"rdf:List"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "first"
+				}
+			],
+			"range": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdf:langString",
+			"type": [
+				"rdfs:Datatype"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The datatype of language-tagged string values"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "langString"
+				}
+			],
+			"seeAlso": [
+				{
+					"id": "http://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Literal"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Datatype_generated"
+			]
+		},
+		{
+			"id": "rdf:language",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The language component of a CompoundLiteral."
+				}
+			],
+			"domain": [
+				"rdf:CompoundLiteral"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "language"
+				}
+			],
+			"seeAlso": [
+				{
+					"id": "https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties"
+				}
+			],
+			"inScheme": [
+				"rdf:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdf:nil",
+			"type": [
+				"rdf:List"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "nil"
+				}
+			]
+		},
+		{
+			"id": "rdf:object",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The object of the subject RDF statement."
+				}
+			],
+			"domain": [
+				"rdf:Statement"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "object"
+				}
+			],
+			"range": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdf:predicate",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The predicate of the subject RDF statement."
+				}
+			],
+			"domain": [
+				"rdf:Statement"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "predicate"
+				}
+			],
+			"range": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdf:rest",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The rest of the subject RDF list after the first item."
+				}
+			],
+			"domain": [
+				"rdf:List"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "rest"
+				}
+			],
+			"range": [
+				"rdf:List"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdf:subject",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The subject of the subject RDF statement."
+				}
+			],
+			"domain": [
+				"rdf:Statement"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "subject"
+				}
+			],
+			"range": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdf:type",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The subject is an instance of a class."
+				}
+			],
+			"domain": [
+				"rdfs:Resource"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "type"
+				}
+			],
+			"range": [
+				"rdfs:Class"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdf:value",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Idiomatic property used for structured values."
+				}
+			],
+			"domain": [
+				"rdfs:Resource"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "value"
+				}
+			],
+			"range": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdf:scheme_for_Class_generated",
+			"type": [
+				"skos:ConceptScheme",
+				"om:defaultScheme"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "Default scheme for Class - autogenerated"
+				},
+				{
+					"@language": "fr",
+					"@value": "Scheme par défault pour les Class - autogenéré"
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "Default Level"
+				},
+				{
+					"@language": "fr",
+					"@value": "Niveau par défaut"
+				}
+			]
+		},
+		{
+			"id": "rdf:scheme_for_Property_generated",
+			"type": [
+				"skos:ConceptScheme",
+				"om:defaultScheme"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "Default scheme for Property - autogenerated"
+				},
+				{
+					"@language": "fr",
+					"@value": "Scheme par défault pour les Property - autogenéré"
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "Default Level"
+				},
+				{
+					"@language": "fr",
+					"@value": "Niveau par défaut"
+				}
+			]
+		},
+		{
+			"id": "rdf:scheme_for_Datatype_generated",
+			"type": [
+				"skos:ConceptScheme",
+				"om:defaultScheme"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "Default scheme for Datatype - autogenerated"
+				},
+				{
+					"@language": "fr",
+					"@value": "Scheme par défault pour les Datatype - autogenéré"
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "Default Level"
+				},
+				{
+					"@language": "fr",
+					"@value": "Niveau par défaut"
+				}
+			]
+		}
+	]
+}
