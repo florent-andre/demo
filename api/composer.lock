@@ -8374,12 +8374,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/schema-generator.git",
-                "reference": "5c7bb2f03640be1917f05e4cd40259cfb5e15ec6"
+                "reference": "1febaf080c2d814d8e0f7d60cec08715761205bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/schema-generator/zipball/5c7bb2f03640be1917f05e4cd40259cfb5e15ec6",
-                "reference": "5c7bb2f03640be1917f05e4cd40259cfb5e15ec6",
+                "url": "https://api.github.com/repos/api-platform/schema-generator/zipball/1febaf080c2d814d8e0f7d60cec08715761205bb",
+                "reference": "1febaf080c2d814d8e0f7d60cec08715761205bb",
                 "shasum": ""
             },
             "require": {
@@ -8450,7 +8450,7 @@
                 "issues": "https://github.com/api-platform/schema-generator/issues",
                 "source": "https://github.com/api-platform/schema-generator/tree/main"
             },
-            "time": "2022-06-30T18:32:14+00:00"
+            "time": "2022-07-07T17:21:14+00:00"
         },
         {
             "name": "cebe/php-openapi",
