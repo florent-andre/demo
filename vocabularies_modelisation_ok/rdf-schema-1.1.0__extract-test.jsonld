@@ -216,7 +216,7 @@
 		},
 
 		{
-			"id": "rdfs:Class",
+			"id": "rdfs:___Class___",
 			"type": [
 				"rdfs:Class"
 			],
@@ -246,133 +246,9 @@
 		},
 
 
-		{
-			"id": "rdfs:Datatype",
-			"type": [
-				"rdfs:Class"
-			],
-			"comment": [
-				{
-					"@language": "en",
-					"@value": "The class of RDF datatypes."
-				}
-			],
-			"isDefinedBy": [
-				{
-					"id": "http://www.w3.org/2000/01/rdf-schema#"
-				}
-			],
-			"label": [
-				{
-					"@language": "en",
-					"@value": "Datatype"
-				}
-			],
-			"subClassOf": [
-				"rdfs:Class"
-			],
-			"inScheme": [
-				"rdfs:scheme_for_Class_generated"
-			]
-		},
-
-		{
-			"id": "rdfs:Literal",
-			"type": [
-				"rdfs:Class"
-			],
-			"comment": [
-				{
-					"@language": "en",
-					"@value": "The class of literal values, eg. textual strings and integers."
-				}
-			],
-			"isDefinedBy": [
-				{
-					"id": "http://www.w3.org/2000/01/rdf-schema#"
-				}
-			],
-			"label": [
-				{
-					"@language": "en",
-					"@value": "Literal"
-				}
-			],
-			"subClassOf": [
-				"rdfs:Resource"
-			],
-			"inScheme": [
-				"rdfs:scheme_for_Class_generated"
-			]
-		},
 
 
-		{
-			"id": "rdfs:comment",
-			"type": [
-				"rdf:Property"
-			],
-			"comment": [
-				{
-					"@language": "en",
-					"@value": "A description of the subject resource."
-				}
-			],
-			"domain": [
-				"rdfs:Resource"
-			],
-			"isDefinedBy": [
-				{
-					"id": "http://www.w3.org/2000/01/rdf-schema#"
-				}
-			],
-			"label": [
-				{
-					"@language": "en",
-					"@value": "comment"
-				}
-			],
-			"range": [
-                "xsd:string",
-				"rdfs:Literal"
-			],
-			"inScheme": [
-				"rdfs:scheme_for_Property_generated"
-			]
-		},
-		{
-			"id": "rdfs:domain",
-			"type": [
-				"rdf:Property"
-			],
-			"comment": [
-				{
-					"@language": "en",
-					"@value": "A domain of the subject property."
-				}
-			],
-			"domain": [
-				"rdf:Property"
-			],
-			"isDefinedBy": [
-				{
-					"id": "http://www.w3.org/2000/01/rdf-schema#"
-				}
-			],
-			"label": [
-				{
-					"@language": "en",
-					"@value": "domain"
-				}
-			],
-			"range": [
-				"rdfs:Class"
-			],
-			"inScheme": [
-				"rdfs:scheme_for_Property_generated"
-			]
-		},
-		{
+        {
 			"id": "rdfs:label",
 			"type": [
 				"rdf:Property"
@@ -407,18 +283,18 @@
 		},
 
 		{
-			"id": "rdfs:range",
+			"id": "rdfs:comment",
 			"type": [
 				"rdf:Property"
 			],
 			"comment": [
 				{
 					"@language": "en",
-					"@value": "A range of the subject property."
+					"@value": "A description of the subject resource."
 				}
 			],
 			"domain": [
-				"rdf:Property"
+				"rdfs:Resource"
 			],
 			"isDefinedBy": [
 				{
@@ -428,16 +304,18 @@
 			"label": [
 				{
 					"@language": "en",
-					"@value": "range"
+					"@value": "comment"
 				}
 			],
 			"range": [
-				"rdfs:Class"
+                "xsd:string",
+				"rdfs:Literal"
 			],
 			"inScheme": [
 				"rdfs:scheme_for_Property_generated"
 			]
 		},
+
 		{
 			"id": "rdfs:subClassOf",
 			"type": [
@@ -450,7 +328,7 @@
 				}
 			],
 			"domain": [
-				"rdfs:Class"
+				"rdfs:___Class___"
 			],
 			"isDefinedBy": [
 				{
@@ -464,7 +342,7 @@
 				}
 			],
 			"range": [
-				"rdfs:Class"
+				"rdfs:___Class___"
 			],
 			"inScheme": [
 				"rdfs:scheme_for_Property_generated"
@@ -497,6 +375,71 @@
 			],
 			"range": [
 				"rdf:Property"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+
+        {
+			"id": "rdfs:domain",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A domain of the subject property."
+				}
+			],
+			"domain": [
+				"rdf:Property"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "domain"
+				}
+			],
+			"range": [
+				"rdfs:___Class___"
+			],
+			"inScheme": [
+				"rdfs:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "rdfs:range",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A range of the subject property."
+				}
+			],
+			"domain": [
+				"rdf:Property"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/2000/01/rdf-schema#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "range"
+				}
+			],
+			"range": [
+				"rdfs:___Class___"
 			],
 			"inScheme": [
 				"rdfs:scheme_for_Property_generated"

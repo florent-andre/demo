@@ -1,0 +1,1503 @@
+{
+	"@context": {
+		"id": "@id",
+		"graph": {
+			"@id": "@graph",
+			"@container": "@set"
+		},
+		"type": {
+			"@id": "@type",
+			"@container": "@set"
+		},
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"first": {
+			"@id": "rdf:first",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"rest": {
+			"@id": "rdf:rest",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"sh": "https://www.w3.org/ns/shacl#",
+		"dct": "http://purl.org/dc/terms/",
+		"domain": {
+			"@id": "rdfs:domain",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"range": {
+			"@id": "rdfs:range",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"label": {
+			"@id": "rdfs:label",
+			"@container": "@set"
+		},
+		"comment": {
+			"@id": "rdfs:comment",
+			"@container": "@set"
+		},
+		"subClassOf": {
+			"@id": "rdfs:subClassOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"subPropertyOf": {
+			"@id": "rdfs:subPropertyOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"isDefinedBy": {
+			"@id": "rdfs:isDefinedBy",
+			"@container": "@set"
+		},
+		"seeAlso": {
+			"@id": "rdfs:seeAlso",
+			"@container": "@set"
+		},
+		"maxCount": {
+			"@id": "sh:maxCount",
+			"@type": "xsd:integer"
+		},
+		"minCount": {
+			"@id": "sh:minCount",
+			"@type": "xsd:integer"
+		},
+		"path": {
+			"@id": "sh:path",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"title": {
+			"@id": "dct:title",
+			"@container": "@set"
+		},
+		"description": {
+			"@id": "dct:description",
+			"@container": "@set"
+		},
+		"date": {
+			"@id": "dct:date",
+			"@container": "@set"
+		},
+		"owl": "http://www.w3.org/2002/07/owl#",
+		"inverseOf": {
+			"@id": "owl:inverseOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"disjointWith": {
+			"@id": "owl:disjointWith",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"unionOf": {
+			"@id": "owl:unionOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"versionInfo": {
+			"@id": "owl:versionInfo",
+			"@container": "@set"
+		},
+		"contributor": {
+			"@id": "dct:contributor",
+			"@container": "@set"
+		},
+		"creator": {
+			"@id": "dct:creator",
+			"@container": "@set"
+		},
+		"created": {
+			"@id": "dct:created",
+			"@container": "@set"
+		},
+		"modified": {
+			"@id": "dct:modified",
+			"@container": "@set"
+		},
+		"license": {
+			"@id": "dct:license",
+			"@container": "@set"
+		},
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"gendj": "https://gen.competencies.be/terms/digitalJobs/",
+		"inScheme": {
+			"@id": "skos:inScheme",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"prefLabel": {
+			"@id": "skos:prefLabel",
+			"@container": "@set"
+		},
+		"altLabel": {
+			"@id": "skos:altLabel",
+			"@container": "@set"
+		},
+		"narrower": {
+			"@id": "skos:narrower",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"broader": {
+			"@id": "skos:broader",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"member": {
+			"@id": "skos:member",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"definition": {
+			"@id": "skos:definition",
+			"@container": "@set"
+		},
+		"scopeNote": {
+			"@id": "skos:scopeNote",
+			"@container": "@set"
+		},
+		"example": {
+			"@id": "skos:example",
+			"@container": "@set"
+		},
+		"foaf": "http://xmlns.com/foaf/0.1/",
+		"mbox": {
+			"@id": "foaf:mbox",
+			"@container": "@set"
+		},
+		"qb": "http://purl.org/linked-data/cube#"
+	},
+	"graph": [
+		{
+			"id": "qb:Ontology",
+			"type": [
+				"owl:Ontology"
+			],
+			"contributor": [
+				{
+					"id": "n3-0"
+				},
+				{
+					"id": "n3-1"
+				},
+				{
+					"id": "n3-2"
+				},
+				{
+					"id": "n3-3"
+				},
+				{
+					"id": "n3-4"
+				}
+			],
+			"created": [
+				{
+					"type": "xsd:date",
+					"@value": "2010-07-12"
+				}
+			],
+			"license": [
+				{
+					"id": "http://www.opendatacommons.org/licenses/pddl/1.0/"
+				}
+			],
+			"modified": [
+				{
+					"type": "xsd:date",
+					"@value": "2010-11-27"
+				},
+				{
+					"type": "xsd:date",
+					"@value": "2013-03-02"
+				},
+				{
+					"type": "xsd:date",
+					"@value": "2013-07-26"
+				}
+			],
+			"title": [
+                {
+					"@language": "fr",
+					"@value": "Data Cube"
+				},
+				{
+					"@language": "en",
+					"@value": "Vocabulary for multi-dimensional (e.g. statistical) data publishing"
+				}
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "This vocabulary allows multi-dimensional data, such as statistics, to be published in RDF. It is based on the core information model from SDMX (and thus also DDI)."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "The data cube vocabulary"
+				}
+			],
+			"versionInfo": [
+				"0.2"
+			]
+		},
+		{
+			"id": "qb:Attachable",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Abstract superclass for everything that can have attributes and dimensions"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Attachable (abstract)"
+				}
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:AttributeProperty",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of components which represent attributes of observations in the cube, e.g. unit of measurement"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Attribute property"
+				}
+			],
+			"subClassOf": [
+				"qb:ComponentProperty"
+			],
+			"disjointWith": [
+				"qb:MeasureProperty"
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:CodedProperty",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Superclass of all coded ComponentProperties"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Coded property"
+				}
+			],
+			"subClassOf": [
+				"qb:ComponentProperty"
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:ComponentProperty",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Abstract super-property of all properties representing dimensions, attributes or measures"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Component property (abstract)"
+				}
+			],
+			"subClassOf": [
+				"rdf:Property"
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:ComponentSet",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Abstract class of things which reference one or more ComponentProperties"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Component set"
+				}
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:ComponentSpecification",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Used to define properties of a component (attribute, dimension etc) which are specific to its usage in a DSD."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Component specification"
+				}
+			],
+			"subClassOf": [
+				"qb:ComponentSet"
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:DataSet",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Represents a collection of observations, possibly organized into various slices, conforming to some common dimensional structure."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Data set"
+				}
+			],
+			"subClassOf": [
+				"qb:Attachable"
+			],
+			"owl:equivalentClass": {
+				"id": "http://purl.org/NET/scovo#Dataset"
+			},
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:DataStructureDefinition",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Defines the structure of a DataSet or slice"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Data structure definition"
+				}
+			],
+			"subClassOf": [
+				"qb:ComponentSet"
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:DimensionProperty",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of components which represent the dimensions of the cube"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Dimension property"
+				}
+			],
+			"subClassOf": [
+				"qb:ComponentProperty",
+				"qb:CodedProperty"
+			],
+			"disjointWith": [
+				"qb:MeasureProperty"
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:HierarchicalCodeList",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Represents a generalized hierarchy of concepts which can be used for coding. The hierarchy is defined by one or more roots together with a property which relates concepts in the hierarchy to thier child concept .  The same concepts may be members of multiple hierarchies provided that different qb:parentChildProperty values are used for each hierarchy."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Hierarchical Code List"
+				}
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:MeasureProperty",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of components which represent the measured value of the phenomenon being observed"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Measure property"
+				}
+			],
+			"subClassOf": [
+				"qb:ComponentProperty"
+			],
+			"disjointWith": [
+				"qb:AttributeProperty",
+				"qb:DimensionProperty"
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:Observation",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A single observation in the cube, may have one or more associated measured values"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Observation"
+				}
+			],
+			"subClassOf": [
+				"qb:Attachable"
+			],
+			"owl:equivalentClass": {
+				"id": "http://purl.org/NET/scovo#Item"
+			},
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:ObservationGroup",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A, possibly arbitrary, group of observations."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Observation Group"
+				}
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:Slice",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Denotes a subset of a DataSet defined by fixing a subset of the dimensional values, component properties on the Slice"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Slice"
+				}
+			],
+			"subClassOf": [
+				"qb:ObservationGroup",
+				"qb:Attachable"
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:SliceKey",
+			"type": [
+				"rdfs:Class",
+				"owl:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Denotes a subset of the component properties of a DataSet which are fixed in the corresponding slices"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Slice key"
+				}
+			],
+			"subClassOf": [
+				"qb:ComponentSet"
+			],
+			"inScheme": [
+				"qb:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "qb:attribute",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An alternative to qb:componentProperty which makes explicit that the component is a attribute"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "attribute"
+				}
+			],
+			"range": [
+				"qb:AttributeProperty"
+			],
+			"subPropertyOf": [
+				"qb:componentProperty"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:codeList",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "gives the code list associated with a CodedProperty"
+				}
+			],
+			"domain": [
+				"qb:CodedProperty"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "code list"
+				}
+			],
+			"range": [
+				"n3-5"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:component",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "indicates a component specification which is included in the structure of the dataset"
+				}
+			],
+			"domain": [
+				"qb:DataStructureDefinition"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "component specification"
+				}
+			],
+			"range": [
+				"qb:ComponentSpecification"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:componentAttachment",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Indicates the level at which the component property should be attached, this might an qb:DataSet, qb:Slice or qb:Observation, or a qb:MeasureProperty."
+				}
+			],
+			"domain": [
+				"qb:ComponentSpecification"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "component attachment"
+				}
+			],
+			"range": [
+				"rdfs:Class"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:componentProperty",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "indicates a ComponentProperty (i.e. attribute/dimension) expected on a DataSet, or a dimension fixed in a SliceKey"
+				}
+			],
+			"domain": [
+				"qb:ComponentSet"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "component"
+				}
+			],
+			"range": [
+				"qb:ComponentProperty"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:componentRequired",
+			"type": [
+				"rdf:Property",
+				"owl:DatatypeProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Indicates whether a component property is required (true) or optional (false) in the context of a DSD. Only applicable\n    to components correspond to an attribute. Defaults to false (optional)."
+				}
+			],
+			"domain": [
+				"qb:ComponentSpecification"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "component required"
+				}
+			],
+			"range": [
+				"xsd:boolean"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:concept",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "gives the concept which is being measured or indicated by a ComponentProperty"
+				}
+			],
+			"domain": [
+				"qb:ComponentProperty"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "concept"
+				}
+			],
+			"range": [
+				"skos:Concept"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:dataSet",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "indicates the data set of which this observation is a part"
+				}
+			],
+			"domain": [
+				"qb:Observation"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "data set"
+				}
+			],
+			"range": [
+				"qb:DataSet"
+			],
+			"owl:equivalentProperty": {
+				"id": "http://purl.org/NET/scovo#dataset"
+			},
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:dimension",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An alternative to qb:componentProperty which makes explicit that the component is a dimension"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "dimension"
+				}
+			],
+			"range": [
+				"qb:DimensionProperty"
+			],
+			"subPropertyOf": [
+				"qb:componentProperty"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:hierarchyRoot",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Specifies a root of the hierarchy. A hierarchy may have multiple roots but must have at least one."
+				}
+			],
+			"domain": [
+				"qb:HierarchicalCodeList"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:measure",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An alternative to qb:componentProperty which makes explicit that the component is a measure"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "measure"
+				}
+			],
+			"range": [
+				"qb:MeasureProperty"
+			],
+			"subPropertyOf": [
+				"qb:componentProperty"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:measureDimension",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An alternative to qb:componentProperty which makes explicit that the component is a measure dimension"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "measure dimension"
+				}
+			],
+			"range": [
+				"qb:DimensionProperty"
+			],
+			"subPropertyOf": [
+				"qb:componentProperty"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:measureType",
+			"type": [
+				"qb:DimensionProperty",
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Generic measure dimension, the value of this dimension indicates which measure (from the set of measures in the DSD) is being given by the obsValue (or other primary measure)"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "measure type"
+				}
+			],
+			"range": [
+				"qb:MeasureProperty"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:observation",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "indicates a observation contained within this slice of the data set"
+				}
+			],
+			"domain": [
+				"qb:ObservationGroup"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "observation"
+				}
+			],
+			"range": [
+				"qb:Observation"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:observationGroup",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Indicates a group of observations. The domain of this property is left open so that a group may be attached to different resources and need not be restricted to a single DataSet"
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "observation group"
+				}
+			],
+			"range": [
+				"qb:ObservationGroup"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:order",
+			"type": [
+				"rdf:Property",
+				"owl:DatatypeProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "indicates a priority order for the components of sets with this structure, used to guide presentations - lower order numbers come before higher numbers, un-numbered components come last"
+				}
+			],
+			"domain": [
+				"qb:ComponentSpecification"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "order"
+				}
+			],
+			"range": [
+				"xsd:int"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:parentChildProperty",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Specifies a property which relates a parent concept in the hierarchy to a child concept."
+				}
+			],
+			"domain": [
+				"qb:HierarchicalCodeList"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "parent-child property"
+				}
+			],
+			"range": [
+				"rdf:Property"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:slice",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Indicates a subset of a DataSet defined by fixing a subset of the dimensional values"
+				}
+			],
+			"domain": [
+				"qb:DataSet"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "slice"
+				}
+			],
+			"range": [
+				"qb:Slice"
+			],
+			"subPropertyOf": [
+				"qb:observationGroup"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:sliceKey",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "indicates a slice key which is used for slices in this dataset"
+				}
+			],
+			"domain": [
+				"qb:DataStructureDefinition"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "slice key"
+				}
+			],
+			"range": [
+				"qb:SliceKey"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:sliceStructure",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "indicates the sub-key corresponding to this slice"
+				}
+			],
+			"domain": [
+				"qb:Slice"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "slice structure"
+				}
+			],
+			"range": [
+				"qb:SliceKey"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "qb:structure",
+			"type": [
+				"rdf:Property",
+				"owl:ObjectProperty"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "indicates the structure to which this data set conforms"
+				}
+			],
+			"domain": [
+				"qb:DataSet"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://purl.org/linked-data/cube"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "structure"
+				}
+			],
+			"range": [
+				"qb:DataStructureDefinition"
+			],
+			"inScheme": [
+				"qb:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "n3-0",
+			"mbox": [
+				"richard@cyganiak.de"
+			]
+		},
+		{
+			"id": "n3-1",
+			"mbox": [
+				"jeni@jenitennison.com"
+			]
+		},
+		{
+			"id": "n3-2",
+			"mbox": [
+				"arofan.gregory@earthlink.net"
+			]
+		},
+		{
+			"id": "n3-3",
+			"mbox": [
+				"ian@epimorphics.com"
+			]
+		},
+		{
+			"id": "n3-4",
+			"mbox": [
+				"dave@epimorphics.com"
+			]
+		},
+		{
+			"id": "n3-5",
+			"unionOf": [
+				"n3-6"
+			]
+		},
+		{
+			"id": "n3-6",
+			"first": [
+				"skos:ConceptScheme"
+			],
+			"rest": [
+				"n3-7"
+			]
+		},
+		{
+			"id": "n3-7",
+			"first": [
+				"skos:Collection"
+			],
+			"rdf:rest": {
+				"@list": [
+					{
+						"id": "qb:HierarchicalCodeList"
+					}
+				]
+			}
+		},
+		{
+			"id": "qb:scheme_for_Class_generated",
+			"type": [
+				"skos:ConceptScheme",
+				"om:defaultScheme"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "Default scheme for Class - autogenerated"
+				},
+				{
+					"@language": "fr",
+					"@value": "Scheme par défault pour les Class - autogenéré"
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "Default Level"
+				},
+				{
+					"@language": "fr",
+					"@value": "Niveau par défaut"
+				}
+			]
+		},
+		{
+			"id": "qb:scheme_for_Property_generated",
+			"type": [
+				"skos:ConceptScheme",
+				"om:defaultScheme"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "Default scheme for Property - autogenerated"
+				},
+				{
+					"@language": "fr",
+					"@value": "Scheme par défault pour les Property - autogenéré"
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "Default Level"
+				},
+				{
+					"@language": "fr",
+					"@value": "Niveau par défaut"
+				}
+			]
+		}
+	]
+}

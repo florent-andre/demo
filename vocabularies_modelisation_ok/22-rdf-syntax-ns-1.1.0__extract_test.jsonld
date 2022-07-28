@@ -103,69 +103,7 @@
 			"inScheme": [
 				"rdf:scheme_for_Class_generated"
 			]
-		},
-
-		{
-			"id": "rdf:Statement",
-			"type": [
-				"rdfs:Class"
-			],
-			"comment": [
-				{
-					"@language": "en",
-					"@value": "The class of RDF statements."
-				}
-			],
-			"isDefinedBy": [
-				{
-					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-				}
-			],
-			"label": [
-				{
-					"@language": "en",
-					"@value": "Statement"
-				}
-			],
-			"subClassOf": [
-				"rdfs:Resource"
-			],
-			"inScheme": [
-				"rdf:scheme_for_Class_generated"
-			]
-		},
-
-		{
-			"id": "rdf:type",
-			"type": [
-				"rdf:Property"
-			],
-			"comment": [
-				{
-					"@language": "en",
-					"@value": "The subject is an instance of a class."
-				}
-			],
-			"domain": [
-				"rdfs:Resource"
-			],
-			"isDefinedBy": [
-				{
-					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-				}
-			],
-			"label": [
-				{
-					"@language": "en",
-					"@value": "type"
-				}
-			],
-			"range": [
-				"rdfs:Class"
-			],
-			"inScheme": [
-				"rdf:scheme_for_Property_generated"
-			]
 		}
+
 	]
 }
