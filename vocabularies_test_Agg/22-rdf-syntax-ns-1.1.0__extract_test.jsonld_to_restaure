@@ -1,0 +1,171 @@
+{
+	"@context": {
+		"id": "@id",
+		"graph": {
+			"@id": "@graph",
+			"@container": "@set"
+		},
+		"type": {
+			"@id": "@type",
+			"@container": "@set"
+		},
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"sh": "https://www.w3.org/ns/shacl#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"dct": "http://purl.org/dc/terms/",
+		"domain": {
+			"@id": "rdfs:domain",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"range": {
+			"@id": "rdfs:range",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"label": {
+			"@id": "rdfs:label",
+			"@container": "@set"
+		},
+		"comment": {
+			"@id": "rdfs:comment",
+			"@container": "@set"
+		},
+		"subClassOf": {
+			"@id": "rdfs:subClassOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"isDefinedBy": {
+			"@id": "rdfs:isDefinedBy",
+			"@container": "@set"
+		},
+		"seeAlso": {
+			"@id": "rdfs:seeAlso",
+			"@container": "@set"
+		},
+		"maxCount": {
+			"@id": "sh:maxCount",
+			"@type": "xsd:integer"
+		},
+		"minCount": {
+			"@id": "sh:minCount",
+			"@type": "xsd:integer"
+		},
+		"path": {
+			"@id": "sh:path",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"title": {
+			"@id": "dct:title",
+			"@container": "@set"
+		},
+		"description": {
+			"@id": "dct:description",
+			"@container": "@set"
+		},
+		"date": {
+			"@id": "dct:date",
+			"@container": "@set"
+		},
+		"owl": "http://www.w3.org/2002/07/owl#"
+	},
+	"graph": [
+
+		{
+			"id": "rdf:Property",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of RDF properties."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Property"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Class_generated"
+			]
+		},
+
+		{
+			"id": "rdf:Statement",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The class of RDF statements."
+				}
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Statement"
+				}
+			],
+			"subClassOf": [
+				"rdfs:Resource"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Class_generated"
+			]
+		},
+
+		{
+			"id": "rdf:type",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "The subject is an instance of a class."
+				}
+			],
+			"domain": [
+				"rdfs:Resource"
+			],
+			"isDefinedBy": [
+				{
+					"id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "type"
+				}
+			],
+			"range": [
+				"rdfs:Class"
+			],
+			"inScheme": [
+				"rdf:scheme_for_Property_generated"
+			]
+		}
+	]
+}
