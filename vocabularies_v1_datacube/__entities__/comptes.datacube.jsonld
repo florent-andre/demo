@@ -1,0 +1,777 @@
+{
+	"@context": {
+		"graph": "@graph",
+		"id": "@id",
+		"type": {
+			"@id": "@type",
+			"@container": "@set"
+		},
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"owl": "http://www.w3.org/2002/07/owl#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"void": "http://rdfs.org/ns/void#",
+		"dct": "http://purl.org/dc/terms/",
+		"foaf": "http://xmlns.com/foaf/0.1/",
+		"org": "http://www.w3.org/ns/org#",
+		"qb": "http://purl.org/linked-data/cube#",
+		"admingeo": "http://data.ordnancesurvey.co.uk/ontology/admingeo/",
+		"interval": "http://reference.data.gov.uk/def/intervals/",
+		"sdmxConcept": "http://purl.org/linked-data/sdmx/2009/concept#",
+		"sdmxDimension": "http://purl.org/linked-data/sdmx/2009/dimension#",
+		"sdmxAttribute": "http://purl.org/linked-data/sdmx/2009/attribute#",
+		"sdmxMeasure": "http://purl.org/linked-data/sdmx/2009/measure#",
+		"sdmxMetadata": "http://purl.org/linked-data/sdmx/2009/metadata#",
+		"sdmxCode": "http://purl.org/linked-data/sdmx/2009/code#",
+		"sdmxSubject": "http://purl.org/linked-data/sdmx/2009/subject#",
+		"exGeo": "http://example.org/geo#",
+		"eg": "http://example.org/ns#",
+		"stats": "https://stats.aksis.dashemploi.eu/",
+		"cal": "http://reference.data.gov.uk/id/gregorian-interval/",
+		"annee": {
+			"@id": "stats:annee",
+			"@type": "xsd:decimal"
+		},
+		"mois": {
+			"@id": "stats:mois",
+			"@type": "xsd:decimal"
+		},
+		"monthNumber": {
+			"@id": "stats:monthNumber",
+			"@type": "xsd:integer"
+		},
+		"categorie": {
+			"@id": "stats:categorie"
+		},
+		"nombreReleve": {
+			"@id": "stats:nombreReleve",
+			"@type": "xsd:decimal"
+		},
+		"observation": {
+			"@id": "qb:observation",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"sliceStructure": {
+			"@id": "qb:sliceStructure",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"dataSet": {
+			"@id": "qb:dataSet",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"component": {
+			"@id": "qb:component",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"dimension": {
+			"@id": "qb:dimension",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"order": {
+			"@id": "qb:order",
+			"@type": "xsd:integer"
+		},
+		"measure": {
+			"@id": "qb:measure",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"attribute": {
+			"@id": "qb:attribute",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"componentAttachment": {
+			"@id": "qb:componentAttachment",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"componentRequired": {
+			"@id": "qb:componentRequired",
+			"@type": "xsd:boolean"
+		},
+		"label": {
+			"@id": "rdfs:label",
+			"@container": "@set"
+		},
+		"range": {
+			"@id": "rdfs:range",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"subPropertyOf": {
+			"@id": "rdfs:subPropertyOf",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"description": {
+			"@id": "dct:description",
+			"@container": "@set"
+		},
+		"publisher": {
+			"@id": "dct:publisher",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"subject": {
+			"@id": "dct:subject",
+			"@container": "@set",
+			"@type": "@id"
+		},
+		"unitMeasure": {
+			"@id": "sdmxAttribute:unitMeasure",
+			"@container": "@set",
+			"@type": "@id"
+		}
+	},
+	"graph": [
+		{
+			"id": "stats:comptes",
+			"type": [
+				"qb:DataSet"
+			],
+			"description": [
+				{
+					"@language": "fr",
+					"@value": "@TODO: mettre à jour"
+				}
+			],
+			"publisher": [
+				"stats:org/MindMatcher"
+			],
+			"subject": [
+				"stats:toUpdate"
+			],
+			"unitMeasure": [
+				"http://dbpedia.org/resource/Year"
+			]
+		},
+		{
+			"id": "stats:dataStructure",
+			"type": [
+				"qb:DataStructureDefinition"
+			],
+			"component": [
+				"stats:anneeComponent",
+				"stats:moisComponent",
+				"stats:categorieComponent",
+				"stats:nombreReleveComponent",
+				"stats:uniMeasureComponent"
+			]
+		},
+		{
+			"id": "stats:anneeComponent",
+			"type": [
+				"qb:ComponentSpecification"
+			],
+			"dimension": [
+				"stats:annee"
+			],
+			"order": 1
+		},
+		{
+			"id": "stats:moisComponent",
+			"type": [
+				"qb:ComponentSpecification"
+			],
+			"dimension": [
+				"stats:mois"
+			],
+			"order": 2
+		},
+		{
+			"id": "stats:monthNumberComponent",
+			"type": [
+				"qb:ComponentSpecification"
+			],
+			"dimension": [
+				"stats:monthNumber"
+			],
+			"order": 3
+		},
+		{
+			"id": "stats:categorieComponent",
+			"type": [
+				"qb:ComponentSpecification"
+			],
+			"dimension": [
+				"stats:categorie"
+			],
+			"order": 4
+		},
+		{
+			"id": "stats:nombreReleveComponent",
+			"type": [
+				"qb:ComponentSpecification"
+			],
+			"measure": [
+				"stats:nombreReleve"
+			]
+		},
+		{
+			"id": "stats:uniMeasureComponent",
+			"type": [
+				"qb:ComponentSpecification"
+			],
+			"attribute": [
+				"sdmxAttribute:unitMeasure"
+			],
+			"componentAttachment": [
+				"qb:DataSet"
+			],
+			"componentRequired": true
+		},
+		{
+			"id": "stats:annee",
+			"type": [
+				"rdf:Property",
+				"qb:DimensionProperty"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "année de l'observation"
+				}
+			],
+			"range": [
+				"xsd:decimal"
+			]
+		},
+		{
+			"id": "stats:mois",
+			"type": [
+				"rdf:Property",
+				"qb:DimensionProperty"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "mois de l'observation"
+				}
+			],
+			"range": [
+				"xsd:string"
+			]
+		},
+		{
+			"id": "stats:monthNumber",
+			"type": [
+				"rdf:Property",
+				"qb:DimensionProperty"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "numéro du mois de l'observation"
+				},
+				{
+					"@language": "en",
+					"@value": "month number of the observation"
+				}
+			],
+			"range": [
+				"xsd:integer"
+			]
+		},
+		{
+			"id": "stats:categorie",
+			"type": [
+				"rdf:Property",
+				"qb:DimensionProperty"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "categorie de l'observation. @TODO: use qb:Concept for range ?"
+				}
+			],
+			"range": [
+				"xsd:string"
+			]
+		},
+		{
+			"id": "stats:nombreReleve",
+			"type": [
+				"rdf:Property",
+				"qb:MeasureProperty"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Nombre identifié lors du relevé"
+				}
+			],
+			"range": [
+				"xsd:decimal"
+			],
+			"subPropertyOf": [
+				"sdmxMeasure:obsValue"
+			]
+		},
+		{
+			"id": "stats:96e33392177118625188b3481e23b1b4a1e88504",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2021,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes Total"
+			},
+			"mois": "décembre",
+			"monthNumber": 12,
+			"nombreReleve": 7886
+		},
+		{
+			"id": "stats:513b291f7dbcfbc80db34dddb2f5ccafce5434e8",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2021,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "juin",
+			"monthNumber": 6,
+			"nombreReleve": 2
+		},
+		{
+			"id": "stats:c1a53e241dbc80b04cfdf4c22d8903094abffa5e",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2021,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "juillet",
+			"monthNumber": 7,
+			"nombreReleve": 856
+		},
+		{
+			"id": "stats:99a4701d6824b52671296a0ab6e8e6823a5e72e6",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2021,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "août",
+			"monthNumber": 8,
+			"nombreReleve": 1157
+		},
+		{
+			"id": "stats:070d86699ba7a2a1273fe49a2e62c91becb9d745",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2021,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "septembre",
+			"monthNumber": 9,
+			"nombreReleve": 1328
+		},
+		{
+			"id": "stats:d88e8b6074b12f3f5e904226a691c2990a3c83fb",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2021,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "octobre",
+			"monthNumber": 10,
+			"nombreReleve": 1759
+		},
+		{
+			"id": "stats:38c33ff381213beb85e7cdeef9da6c4c0965e721",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2021,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "novembre",
+			"monthNumber": 11,
+			"nombreReleve": 1384
+		},
+		{
+			"id": "stats:b1506fbd6c75ce72e912307e395ce53a48fec034",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2021,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "décembre",
+			"monthNumber": 12,
+			"nombreReleve": 1584
+		},
+		{
+			"id": "stats:6294efcb9ae5add820ee73c3744ffc053d2819c5",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes Total"
+			},
+			"mois": "janvier",
+			"monthNumber": 1,
+			"nombreReleve": 9948
+		},
+		{
+			"id": "stats:6d6228f0648ca33ce64bd775e529b5b3350b1bdc",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "janvier",
+			"monthNumber": 1,
+			"nombreReleve": 1910
+		},
+		{
+			"id": "stats:a0771790f2849770df81e386b1f48bf486e80079",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "février",
+			"monthNumber": 2,
+			"nombreReleve": 2273
+		},
+		{
+			"id": "stats:26b570e0eafd6bc9491c9e2cb327daa8075cf396",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "mars",
+			"monthNumber": 3,
+			"nombreReleve": 2359
+		},
+		{
+			"id": "stats:0f5af176dc0588b74018ab9b7b123fb43d8a0900",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "avril",
+			"monthNumber": 4,
+			"nombreReleve": 1945
+		},
+		{
+			"id": "stats:4ca8a896c4178f4201a72818070349bff6f16340",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "mai",
+			"monthNumber": 5,
+			"nombreReleve": 2143
+		},
+		{
+			"id": "stats:182284d261d20ed75f09efb22f6401e6eb9ed597",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "juin",
+			"monthNumber": 6,
+			"nombreReleve": 1911
+		},
+		{
+			"id": "stats:d06656b6ef95896cedfd87251226105983062e7a",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "juillet",
+			"monthNumber": 7,
+			"nombreReleve": 903
+		},
+		{
+			"id": "stats:7037761a097e9badfa60441871fb66452a8e4a50",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "août",
+			"monthNumber": 8,
+			"nombreReleve": 0
+		},
+		{
+			"id": "stats:bbd1f04eff76818d416571c37a0e71cd1f575c1c",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "septembre",
+			"monthNumber": 9,
+			"nombreReleve": 0
+		},
+		{
+			"id": "stats:920707440f2b72dde980478c01df0cdcc827d9f7",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "octobre",
+			"monthNumber": 10,
+			"nombreReleve": 0
+		},
+		{
+			"id": "stats:6e0109ce2452ec99d00b391c647fcd55244be728",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "novembre",
+			"monthNumber": 11,
+			"nombreReleve": 0
+		},
+		{
+			"id": "stats:e76c3c224e16823863e1fb1cf1e770a74aa53c4c",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes créés par mois"
+			},
+			"mois": "décembre",
+			"monthNumber": 12,
+			"nombreReleve": 0
+		},
+		{
+			"id": "stats:88636e5d0150e25c26cd499f2e68d25d98e5aed6",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes Total"
+			},
+			"mois": "février",
+			"monthNumber": 2,
+			"nombreReleve": 10000
+		},
+		{
+			"id": "stats:506de4835ecf80306de2842e39a844c3e560ab0b",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes Total"
+			},
+			"mois": "mars",
+			"monthNumber": 3,
+			"nombreReleve": 10000
+		},
+		{
+			"id": "stats:014872ff72c66330f6111ebf60053bda59231a1a",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes Total"
+			},
+			"mois": "avril",
+			"monthNumber": 4,
+			"nombreReleve": 15714
+		},
+		{
+			"id": "stats:5d4c83ba60420591ab109ee2810c89211100ff23",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes Total"
+			},
+			"mois": "mai",
+			"monthNumber": 5,
+			"nombreReleve": 18586
+		},
+		{
+			"id": "stats:334b69a44e831348749fdec00ea9f965a9551a6f",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes Total"
+			},
+			"mois": "juin",
+			"monthNumber": 6,
+			"nombreReleve": 19035
+		},
+		{
+			"id": "stats:a4b6edc9899cc09e3a944c83e30424c338bd38d9",
+			"type": [
+				"qb:Observation"
+			],
+			"dataSet": [
+				"stats:comptes"
+			],
+			"annee": 2022,
+			"categorie": {
+				"@language": "fr",
+				"@value": "nb comptes Total"
+			},
+			"mois": "juillet",
+			"monthNumber": 7,
+			"nombreReleve": 21566
+		}
+	]
+}

@@ -1,0 +1,163 @@
+{
+    "@context": {
+        "id": "@id",
+        "graph": {
+            "@id": "@graph",
+            "@container": "@set"
+        },
+        "type": {
+            "@id": "@type",
+            "@container": "@set"
+        },
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "sh": "https://www.w3.org/ns/shacl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "dct": "http://purl.org/dc/terms/",
+        "vs": "https://www.w3.org/2003/06/sw-vocab-status/ns/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "sch": "http://schema.org/",
+        "nfr": "https://gitlab.com/mmorg/nodefr-2/",
+        "domain": {
+            "@id": "rdfs:domain",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "range": {
+            "@id": "rdfs:range",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "label": {
+            "@id": "rdfs:label",
+            "@container": "@set"
+        },
+        "comment": {
+            "@id": "rdfs:comment",
+            "@container": "@set"
+        },
+        "subClassOf": {
+            "@id": "rdfs:subClassOf",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "maxCount": {
+            "@id": "sh:maxCount",
+            "@type": "xsd:integer"
+        },
+        "minCount": {
+            "@id": "sh:minCount",
+            "@type": "xsd:integer"
+        },
+        "path": {
+            "@id": "sh:path",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "isAbstract": "sh:isAbstract",
+        "inScheme": {
+            "@id": "skos:inScheme",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "prefLabel": {
+            "@id": "skos:prefLabel",
+            "@container": "@set"
+        },
+        "topConceptOf": {
+            "@id": "skos:topConceptOf",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "hasTopConcept": {
+            "@id": "skos:hasTopConcept",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "notation": {
+            "@id": "skos:notation",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "scopeNote": {
+            "@id": "skos:scopeNote",
+            "@container": "@set"
+        },
+        "status": {
+            "@id": "vs:status",
+            "@container": "@set"
+        },
+        "example": {
+            "@id": "skos:example",
+            "@container": "@set"
+        }
+    },
+    "graph": [
+        {
+            "id": "nfr:EntiteDuMondeDeLaFormation",
+            "type": [
+                "rdfs:Class"
+            ],
+            "isAbstract": true
+        },
+        {
+            "id": "nfr:FormationGenerique",
+            "type": [
+                "rdfs:Class"
+            ],
+            "subClassOf": [
+                "nfr:EntiteDuMondeDeLaFormation"
+            ]
+        },
+        {
+            "id": "nfr:conditionDAcces",
+            "type": [
+                "rdf:Property"
+            ],
+            "domain": [
+                "nfr:OffreDeFormation"
+            ],
+            "range": [
+                "nfr:ConditionDAcces"
+            ]
+        },
+        {
+            "id": "nfr:Formation",
+            "type": [
+                "rdfs:Class"
+            ],
+            "subClassOf": [
+                "nfr:FormationGenerique",
+                "nfr:ConditionDAcces"
+            ],
+            "isAbstract": true
+        },
+        {
+            "id": "nfr:OffreDeFormation",
+            "type": [
+                "rdfs:Class"
+            ],
+            "subClassOf": [
+                "nfr:FormationGenerique",
+                "nfr:ConditionDAcces"
+            ]
+        },
+        {
+            "id": "nfr:description",
+            "type": [
+                "rdf:Property"
+            ],
+            "domain": [
+                "nfr:CertificatBadgeDiplome",
+                "nfr:Prerequis",
+                "nfr:FraisDeFormation",
+                "nfr:FormationGenerique"
+            ],
+            "range": [
+                "rdf:langString",
+                "sch:Text"
+            ]
+        }
+    ]
+}

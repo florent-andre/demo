@@ -1,0 +1,87 @@
+{
+  "id": "b108ae48-4f38-4568-b58f-f7ba8a34ed52",
+  "title": "Formation Gestion du stress - 2 jours",
+  "coordinates": "50.6753, 3.10094",
+  "adress_concat": "165 avenue de Bretagne 59000 Lille",
+  "ville_pref_label": "Lille",
+  "departement_pref_label": "Nord",
+  "region_pref_label": "Hauts-de-France",
+  "pays_pref_label": "FRANCE",
+  "phone_number": [],
+  "price": 0,
+  "objectif_formation": "A l'issue de la formation le stagiaire sera capable de diagnostiquer son niveau de stress, ses sources de stress, et faire face à ce stress en utilisant 5 clés : - limiter l'impact physique du stress - reprendre le contrôle - se protéger des intrusions - s'adapter et lâcher prise - gérer les relations",
+  "resultats_attendus": null,
+  "contenu_formation": "1. Identifier son attitude face au stress - Les sources de stress - Les réactions face au stress - Les symptômes à repérer 2. Identifier son attitude face aux stresseurs - Analyser ses propres mécanismes de réactions face aux stresseurs. - Prendre conscience de son positionnement vis-à-vis des autres et de soi-même. - Analyser son comportement sous pression. 3. Reprendre le contrôle - Faire le diagnostic des domaines sur lesquels on peut agir - Maintenir son niveau d'énergie. - Gérer sa stabilité émotionnelle 4. Gérer les périodes de forte charge - Évaluer son niveau de fatigue - Les clés pour se régénérer physiquement - Les clés pour gérer la fatigue morale 5. Gérer les stresseurs - Faire face aux sollicitations. - Poser ses limites en évitant le conflit. - Faire respecter ses frontières et augmenter sa propre capacité à faire face. - Savoir dire non quand c'est nécessaire. - Utiliser les outils de la CNV pour anticiper les situations stressantes.",
+  "conditions_specifiques": "Aucun prérequis n'est nécessaire à la participation de cette formation",
+  "modalite_enseignement___id": "nfr:presentielle",
+  "modalite_enseignement___pref_label": "formation entièrement présentielle",
+  "certifiante": 0,
+  "type_formation": "Non-défini",
+  "acces_handicap___value": 0,
+  "acces_handicap___pref_label": "Accessibilité non renseignée",
+  "prise_en_charge": "Formation éligible au financement via Pôle Emploi",
+  "code_niveau_entree": "-3) Cas spécial de niveau indéfini",
+  "code_niveau_sortie": "-3) Cas spécial de niveau indéfini",
+  "niveau_entree_obligatoire": "-3) Cas spécial de niveau indéfini",
+  "startdates": [
+    "2022-01-01T00:00:00.000Z"
+  ],
+  "enddates": [
+    "2023-01-01T00:00:00.000Z"
+  ],
+  "learning_time___hours": 14,
+  "months_duration": [
+    12
+  ],
+  "bac_level_in": [
+    "Sans le Bac",
+    "Bac"
+  ],
+  "bac_level_out": [
+    "Sans le Bac",
+    "Bac"
+  ],
+  "type_cycle_value": [
+    0
+  ],
+  "type_cycle_pref_label": [
+    "Formation initiale"
+  ],
+  "type_alternance_value": [
+    null
+  ],
+  "type_alternance_pref_label": [
+    null
+  ],
+  "se_deroule_en_alternance": [
+    0
+  ],
+  "initiale_ou_continue": [
+    1
+  ],
+  "sector___id": [
+    "gendj:undefined"
+  ],
+  "sector___pref_label": [
+    "non-défini"
+  ],
+  "job___id": [
+    "gendj:undefined"
+  ],
+  "job___pref_label": [
+    "non-défini"
+  ],
+  "position___id": [
+    "gendj:undefined"
+  ],
+  "position___pref_label": [
+    "non-défini"
+  ],
+  "url_aggregator": "http://www.c2rp.fr/formation/1483551#1872522",
+  "url_provider": "https://omneo-solutions.com/",
+  "aggregator_provider": true,
+  "training_provider": "OMNEO Solutions",
+  "is_inclusive___id": [],
+  "is_inclusive___pref_label": [],
+  "accepted_by": "Accepte les formations de PE sans niveau d'entrée ni sortie. Ajout d'une valeur par défault"
+}

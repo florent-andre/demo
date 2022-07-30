@@ -1,0 +1,535 @@
+{
+	"@context": {
+		"id": "@id",
+		"graph": {
+			"@id": "@graph",
+			"@container": "@set"
+		},
+		"type": {
+			"@id": "@type",
+			"@container": "@set"
+		},
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"first": {
+			"@id": "rdf:first",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"rest": {
+			"@id": "rdf:rest",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"sh": "http://www.w3.org/ns/shacl#",
+		"dct": "http://purl.org/dc/terms/",
+		"domain": {
+			"@id": "rdfs:domain",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"range": {
+			"@id": "rdfs:range",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"label": {
+			"@id": "rdfs:label",
+			"@container": "@set"
+		},
+		"comment": {
+			"@id": "rdfs:comment",
+			"@container": "@set"
+		},
+		"subClassOf": {
+			"@id": "rdfs:subClassOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"subPropertyOf": {
+			"@id": "rdfs:subPropertyOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"isDefinedBy": {
+			"@id": "rdfs:isDefinedBy",
+			"@container": "@set"
+		},
+		"seeAlso": {
+			"@id": "rdfs:seeAlso",
+			"@container": "@set"
+		},
+		"maxCount": {
+			"@id": "sh:maxCount",
+			"@type": "xsd:integer"
+		},
+		"minCount": {
+			"@id": "sh:minCount",
+			"@type": "xsd:integer"
+		},
+		"path": {
+			"@id": "sh:path",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"title": {
+			"@id": "dct:title",
+			"@container": "@set"
+		},
+		"description": {
+			"@id": "nfr:description",
+			"@container": "@set"
+		},
+		"date": {
+			"@id": "dct:date",
+			"@container": "@set"
+		},
+		"owl": "http://www.w3.org/2002/07/owl#",
+		"inverseOf": {
+			"@id": "owl:inverseOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"disjointWith": {
+			"@id": "owl:disjointWith",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"propertyDisjointWith": {
+			"@id": "owl:propertyDisjointWith",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"unionOf": {
+			"@id": "owl:unionOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"versionInfo": {
+			"@id": "owl:versionInfo",
+			"@container": "@set"
+		},
+		"priorVersion": {
+			"@id": "owl:priorVersion",
+			"@container": "@set"
+		},
+		"imports": {
+			"@id": "owl:imports",
+			"@container": "@set"
+		},
+		"versionIRI": {
+			"@id": "owl:versionIRI",
+			"@container": "@set"
+		},
+		"maxCardinality": {
+			"@id": "owl:maxCardinality",
+			"@container": "@set"
+		},
+		"contributor": {
+			"@id": "dct:contributor",
+			"@container": "@set"
+		},
+		"creator": {
+			"@id": "dct:creator",
+			"@container": "@set"
+		},
+		"created": {
+			"@id": "dct:created",
+			"@container": "@set"
+		},
+		"modified": {
+			"@id": "dct:modified",
+			"@container": "@set"
+		},
+		"license": {
+			"@id": "dct:license",
+			"@container": "@set"
+		},
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"gendj": "https://gen.competencies.be/terms/digitalJobs/",
+		"inScheme": {
+			"@id": "skos:inScheme",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"prefLabel": {
+			"@id": "skos:prefLabel",
+			"@container": "@set"
+		},
+		"altLabel": {
+			"@id": "skos:altLabel",
+			"@container": "@set"
+		},
+		"narrower": {
+			"@id": "skos:narrower",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"broader": {
+			"@id": "skos:broader",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"member": {
+			"@id": "skos:member",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"definition": {
+			"@id": "skos:definition",
+			"@container": "@set"
+		},
+		"scopeNote": {
+			"@id": "skos:scopeNote",
+			"@container": "@set"
+		},
+		"example": {
+			"@id": "skos:example",
+			"@container": "@set"
+		},
+		"foaf": "http://xmlns.com/foaf/0.1/",
+		"mbox": {
+			"@id": "foaf:mbox",
+			"@container": "@set"
+		},
+		"qb": "http://purl.org/linked-data/cube#",
+		"dv": "http://www.w3.org/2003/g/data-view#",
+		"namespaceTransformation": {
+			"@id": "dv:namespaceTransformation",
+			"@container": "@set"
+		},
+		"mmo": "https://ontologies.mindmatcher.org/carto/",
+		"mnx": "http://ns.mnemotix.com/ontologies/2019/8/generic-model/",
+		"hasAccessPrivilege": {
+			"@id": "mnx:hasAccessPrivilege",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"hasScope": {
+			"@id": "mnx:hasScope",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"oep": "http://ontology.datasud.fr/openemploi/",
+		"sioc": "http://rdfs.org/sioc/ns#",
+		"prov": "http://www.w3.org/ns/prov#",
+		"geop": "http://www.opengis.net/ont/geosparql#",
+		"sch": "http://schema.org/",
+		"address": {
+			"@id": "sch:address",
+			"@container": "@set"
+		},
+		"stardDate": {
+			"@id": "sch:stardDate",
+			"@container": "@set"
+		},
+		"author": {
+			"@id": "sch:author",
+			"@container": "@set"
+		},
+		"image": {
+			"@id": "sch:image",
+			"@container": "@set"
+		},
+		"provider": {
+			"@id": "sch:provider",
+			"@container": "@set"
+		},
+		"publisher": {
+			"@id": "sch:publisher",
+			"@container": "@set"
+		},
+		"url": {
+			"@id": "sch:url",
+			"@container": "@set"
+		},
+		"name": {
+			"@id": "sch:name",
+			"@container": "@set"
+		},
+		"logo": {
+			"@id": "sch:logo",
+			"@container": "@set"
+		},
+		"identifier": {
+			"@id": "sch:identifier",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"sch_contributor": {
+			"@id": "sch:contributor",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"openBadge": "https://w3id.org/openbadges#",
+		"badge": {
+			"@id": "openBadge:badge",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"issuer": {
+			"@id": "openBadge:issuer",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"issuedOn": {
+			"@id": "openBadge:issuedOn",
+			"@container": "@set"
+		},
+		"recipient": {
+			"@id": "openBadge:recipient",
+			"@container": "@set"
+		},
+		"openBadge_image": {
+			"@id": "openBadge:image",
+			"@container": "@set"
+		},
+		"openBadge_name": {
+			"@id": "openBadge:name",
+			"@container": "@set"
+		},
+		"openBadge_url": {
+			"@id": "openBadge:url",
+			"@container": "@set"
+		},
+		"criteria": {
+			"@id": "openBadge:criteria",
+			"@container": "@set"
+		},
+		"vs": "https://www.w3.org/2003/06/sw-vocab-status/ns/",
+		"nfr": "https://nodefr.competencies.be/nfr/",
+		"aPourNiveau": {
+			"@id": "nfr:aPourNiveau",
+			"@container": "@set"
+		},
+		"chargeDeTravail": {
+			"@id": "nfr:chargeDeTravail",
+			"@container": "@set"
+		},
+		"devise": {
+			"@id": "nfr:devise",
+			"@container": "@set"
+		},
+		"montant": {
+			"@id": "nfr:montant",
+			"@container": "@set"
+		},
+		"typeDActivite": {
+			"@id": "nfr:typeDActivite",
+			"@container": "@set"
+		},
+		"ori": "https://ori.competencies.be/ori/",
+		"experienceStructure": {
+			"@id": "ori:experienceStructure",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"experienceType": {
+			"@id": "ori:experienceType",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"public": {
+			"@id": "ori:public",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"role": {
+			"@id": "ori:role",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"tache": {
+			"@id": "ori:tache",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"hobby": {
+			"@id": "ori:hobby",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"bloom": {
+			"@id": "ori:bloom",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"nodeKind": {
+			"@id": "sh:nodeKind",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"parameter": {
+			"@id": "sh:parameter",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"datatype": {
+			"@id": "sh:datatype",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"declare": {
+			"@id": "sh:declare",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"propertyValidator": {
+			"@id": "sh:propertyValidator",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"jsLibrary": {
+			"@id": "sh:jsLibrary",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"property": {
+			"@id": "sh:property",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"targetClass": {
+			"@id": "sh:targetClass",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"suggestedShapesGraph": {
+			"@id": "sh:suggestedShapesGraph",
+			"@container": "@set"
+		},
+		"jsFunctionName": {
+			"@id": "sh:jsFunctionName",
+			"@container": "@set"
+		},
+		"message": {
+			"@id": "sh:message",
+			"@container": "@set"
+		},
+		"sh_description": {
+			"@id": "sh:description",
+			"@container": "@set"
+		},
+		"sh_name": {
+			"@id": "sh:name",
+			"@container": "@set"
+		},
+		"optional": {
+			"@id": "sh:optional",
+			"@container": "@set"
+		},
+		"namespace": {
+			"@id": "sh:namespace",
+			"@container": "@set"
+		},
+		"jsLibraryURL": {
+			"@id": "sh:jsLibraryURL",
+			"@container": "@set"
+		},
+		"om": "https://ontomodel.competencies.be/ontomodel/",
+		"index": {
+			"@id": "om:index",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"records": {
+			"@id": "om:records",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"icon": {
+			"@id": "om:icon"
+		},
+		"ii": "https://mm.competencies.be/indexInstruction/",
+		"instruction": {
+			"@id": "ii:instruction",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"mms": "https://ismene.competencies.be/mms/",
+		"isInCollectionOrScheme": {
+			"@id": "mms:isInCollectionOrScheme",
+			"@type": "@id",
+			"@container": "@set"
+		}
+	},
+	"graph": [
+
+        {
+			"id": "dct:description",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An account of the resource."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Description"
+				}
+			],
+            "domain": [
+                "qb:Attachable"
+            ],
+            "range": [
+                "xsd:string"
+            ]
+		},
+        {
+			"id": "dct:publisher",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An entity responsible for making the resource available."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Publisher"
+				}
+			],
+            "domain": [
+                "qb:Attachable"
+            ],
+            "range": [
+                "xsd:string"
+            ]
+		},
+
+        {
+			"id": "dct:subject",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "A topic of the resource."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Subject"
+				}
+			],
+			"domain": [
+                "qb:Attachable"
+            ],
+            "range": [
+                "xsd:string"
+            ]
+		}
+
+
+	]
+}
