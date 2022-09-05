@@ -1,0 +1,8848 @@
+{
+	"@context": {
+		"id": "@id",
+		"graph": {
+			"@id": "@graph",
+			"@container": "@set"
+		},
+		"type": {
+			"@id": "@type",
+			"@container": "@set"
+		},
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"sh": "https://www.w3.org/ns/shacl#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"dct": "http://purl.org/dc/terms/",
+		"vs": "https://www.w3.org/2003/06/sw-vocab-status/ns/",
+		"owl": "http://www.w3.org/2002/07/owl#",
+		"sch": "http://schema.org/",
+		"nfr": "https://gitlab.com/mmorg/nodefr-2/",
+		"domain": {
+			"@id": "rdfs:domain",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"range": {
+			"@id": "rdfs:range",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"label": {
+			"@id": "rdfs:label",
+			"@container": "@set"
+		},
+		"comment": {
+			"@id": "rdfs:comment",
+			"@container": "@set"
+		},
+		"subClassOf": {
+			"@id": "rdfs:subClassOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"maxCount": {
+			"@id": "sh:maxCount",
+			"@type": "xsd:integer"
+		},
+		"minCount": {
+			"@id": "sh:minCount",
+			"@type": "xsd:integer"
+		},
+		"path": {
+			"@id": "sh:path",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"isAbstract": "sh:isAbstract",
+		"inScheme": {
+			"@id": "skos:inScheme",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"prefLabel": {
+			"@id": "skos:prefLabel",
+			"@container": "@set"
+		},
+		"topConceptOf": {
+			"@id": "skos:topConceptOf",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"hasTopConcept": {
+			"@id": "skos:hasTopConcept",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"notation": {
+			"@id": "skos:notation",
+			"@type": "@id",
+			"@container": "@set"
+		},
+		"scopeNote": {
+			"@id": "skos:scopeNote",
+			"@container": "@set"
+		},
+		"status": {
+			"@id": "vs:status",
+			"@container": "@set"
+		},
+		"example": {
+			"@id": "skos:example",
+			"@container": "@set"
+		}
+	},
+	"graph": [
+		{
+			"id": "nfr:Action",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An instance of this class is an act in the real world, which generates\nchanges in the state of one or more entities."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Action"
+				}
+			],
+			"subClassOf": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"notation": [
+				"ISO_IEC_22602@RC0001"
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "Usually, an action is semantically represented by an action verb followed\nby an object to which it applies.\nExamples: to write a paper\nto play a symphony\nto build a bridge"
+				}
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:ActionDeFormation",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est la réalisation concrète de la formation (sens catalogue). Il décrit un itinéraire composé de situations de formation permettant d'atteindre un objectif de développement personnel ou professionnel spécifié"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Action de formation"
+				}
+			],
+			"subClassOf": [
+				"nfr:Formation",
+				"nfr:ConditionDAcces"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : description générale du BTS services informatiques aux organisations (BTS SIO) dans le lycée Flaubert de Rouen"
+				}
+			],
+			"notation": [
+				"RC0101"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Cette classe se concrétise dans un catalogue. Elle se décline en un ou plusieurs parcours."
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:ActivitePedagogique",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est une forme spécifique d'une situation conçue pour apprendre"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Activité pédagogique"
+				}
+			],
+			"subClassOf": [
+				"nfr:Formation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : travaux pratiques en réseau informatique nécessitant un routeur internet."
+				}
+			],
+			"notation": [
+				"RC0105"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Une activité pédagogique peut être décrite en spécifiant son type, sa modalité de mise en oeuvre et le matériel nécessaire à sa réalisation."
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Actor",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An instance of this class is a person or group of people or automated agents\nwho have the potential to perform an action."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Actor"
+				}
+			],
+			"subClassOf": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"notation": [
+				"ISO_IEC_22602@RC0002"
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "Usually, an actor is semantically represented by the subject of an action verb.\nExamples: the entity designated by the name “Arthur Cravan”\nthe entity designated by “The Paris Symphony\nOrchestra”\nthe entity designated by “GG Engineering”"
+				}
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Admission",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe décrit la procédure d'admission à une réalisation de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Admission"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : l'étude des dossiers d'admission a lieu de telle date à telle date"
+				}
+			],
+			"notation": [
+				"RC0082"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Alternance",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe permet décrit les caractéristiques de l'alternance"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Alternance"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : l'alternance a lieu au rythme de deux semaines en centre de formation et deux semaines en entreprise durant la première année du BTS SIO"
+				}
+			],
+			"notation": [
+				"RC0042"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:CertificatBadgeDiplome",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est la reconnaissance des compétences, des connaissances, des savoir-faire d'une personne"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Certificat, badge, diplôme"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : reconnaissance des compétences, des connaissances, des savoir-faire d'une personne"
+				}
+			],
+			"notation": [
+				"RC0015"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Certification",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est la reconnaissance de la qualité de l'offre d'un organisme donné selon un référentiel spécifié"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Certification"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Certification ISO 9001, QUALIOPI"
+				}
+			],
+			"notation": [
+				"RC0016"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Codification",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe représente une codication dans en un type donné"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Codification"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : RNCP35340"
+				}
+			],
+			"notation": [
+				"RC0019"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Competency",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An instance of this class is an ability of an actor to perform an action on an\nentity in a given environment to achieve specific outcome."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Competency"
+				}
+			],
+			"subClassOf": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"notation": [
+				"ISO_IEC_22602@RC0003"
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "Very often, “is able” denoting the abilities or the word “ability” is omitted\nin the description, and a competency is described as an action followed by\nthe generated outcome.\nExamples: (ability) to synthetize the main trends in the domain\n(the orchestra is able) to play Beethoven’s 5th Symphony in\nthe Concert Hall superlatively well\n(GG Engineers are able) to apply structural engineering\nprinciples and techniques"
+				}
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:CompetencyWorldEntity",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An instance of this class is a real-world entity which belongs to one of the\nclasses of the structural model of the competency world."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Competency World Entity"
+				}
+			],
+			"subClassOf": [
+				"sch:Thing",
+				"rdfs:Resource",
+				"owl:Thing"
+			],
+			"notation": [
+				"ISO_IEC_22602@RC0000"
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "There are nine competency world entities numbered RC0001 to RC0009,\nwhich are presented in Figure 1 and described below."
+				}
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Composition",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Classe abstraite qui définit la composition d'une action de formation, d'un parcours ou d'un module en termes d'élément de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Composition"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"notation": [
+				"RC0060"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Super classe des classes \"composition\" obligatoire, optionnelle et à choix"
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"isAbstract": true,
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:CompositionAChoix",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe définit le caractère \"à choix\" de la composition d'une action de formation, d'un parcours ou d'un module en termes d'éléments de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Composition à choix"
+				}
+			],
+			"subClassOf": [
+				"nfr:Composition"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : dans le module M d'un parcours P, un étudiant peut choisir entre 2 et 3 éléments de formation parmi 5"
+				}
+			],
+			"notation": [
+				"RC0063"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:CompositionObligatoire",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe définit le caractère obligatoire de la composition d'une action de formation, d'un parcours ou d'un module en termes d'éléments de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Composition obligatoire"
+				}
+			],
+			"subClassOf": [
+				"nfr:Composition"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : dans le BTS SIO pour le module \"bloc 2\" du parcours \"SLAM\", l'élément de formation \"Conception et développement d'applications est obligatoire"
+				}
+			],
+			"notation": [
+				"RC0061"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:CompositionOptionnelle",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe définit le caractère optionnel de la composition d'une action de formation, d'un parcours ou d'un module en termes d'éléments de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Composition optionnelle"
+				}
+			],
+			"subClassOf": [
+				"nfr:Composition"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : dans le BTS SIO pour le parcours \"SLAM\", l'élément de formation \"Mathématiques approfondies\" est optionnel"
+				}
+			],
+			"notation": [
+				"RC0062"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:ConditionDAcces",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe indique les conditions d'admission pour pouvoir postuler à une offre de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Condition d'accès"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"notation": [
+				"RC0030"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Ces conditions peuvent être exprimées de façon formelle ou informelle. Il peut y avoir plusieurs instances des modalités de sélection"
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Contact",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe représente un contact d'une formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Contact"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"notation": [
+				"RC0018"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:CoordonneesGps",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe permet de positionner un lieu physique dans le référentiel GPS"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Coordonnées GPS"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : 49.45109, 1.12181"
+				}
+			],
+			"notation": [
+				"RC0096"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:CreditsEcts",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe définit le nombre de crédits ECTS qui peuvent être contextuels à une offre de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Crédits ECTS"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"notation": [
+				"RC0070"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:CriteriaAndMethod",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An instance of this class is a criterion or a set of criteria to assess outcomes\nof an action or a method or a set of methods to provide a measurement of a\ncompetency, through an evaluation, assessment process."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Criteria and method"
+				}
+			],
+			"subClassOf": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"notation": [
+				"ISO_IEC_22602@RC0004"
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "Criteria and method can be quantitative or qualitative, as well as a mixture\nof both quantitative and qualitative. Quantitative methods usually require\na measuring instrument, whereas qualitative methods are based on a\njudgement.\nExamples: Quantitative criterion to evaluate a paper: up to 10 points\nfor the ideas, 5 points for the style, and 5 points for the\nspelling\nQualitative criterion: a standing ovation is the highest mark\nof appraisal of a concert\nQuantitative method: measurement of bridge resistance\nthrough a 20-ton load test"
+				}
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:ElementDeFormation",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est une unité pédagogique ou un regroupement d'unités pédagogiques"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Élément de formation"
+				}
+			],
+			"subClassOf": [
+				"nfr:Formation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Au sein du BTS services informatiques aux organisations (BTS SIO), option 1 SLAM solutions logicielles et applications métier proposé par le lycée Flaubert de Rouen, il y a un élément de formation \"Mathématiques pour l'informatique\" composé des éléments de formation \"mathématiques\" et \"algorithmique avancée\""
+				}
+			],
+			"notation": [
+				"RC0104"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Un élément de formation peut être composé d'activités pédagogiques. Il peut correspondre à un \"cours\" ou un ensemble de cours pédagogiquement cohérents. Pour l'enseignement supérieur le traité de Bologne appelle cette notion unité d'enseignement. "
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:EntiteDuMondeDeLaFormation",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Classe abstraite qui regroupe les propriétés communes à toutes les situations ou à l'ensemble de situations visant un ou plusieurs objectifs de développement personnel ou professionnel"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Entité du monde de la formation"
+				}
+			],
+			"subClassOf": [
+				"sch:Thing",
+				"rdfs:Resource",
+				"owl:Thing"
+			],
+			"notation": [
+				"RC0000"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Super classe de toutes les classes. Elle regroupe toutes les propriétés des classes présentes dans ce modèle"
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"isAbstract": true,
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Environment",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An instance of this class is any physical or virtual entity or set of physical\nor virtual entities composing the surroundings of an action."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Environment"
+				}
+			],
+			"subClassOf": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"notation": [
+				"ISO_IEC_22602@RC0005"
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "The instances of this entity influence the way an action is performed by\nan actor.\nExamples: the student’s computer running an Operating System and\nSoftware\nthe Olympia Concert Hall\nthe Thames River in the central part of the City"
+				}
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Equipement",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe décrit un équipement indispensable à une formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Équipement"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : un ordinateur portable est nécessaire à la suivi du BTS SIO"
+				}
+			],
+			"notation": [
+				"RC0043"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:EvaluationAssessmentProcess",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An instance of this class is an evaluation process or assessment process\nused to assess outcomes, i.e. the results of actions."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Evaluation, assessment process"
+				}
+			],
+			"subClassOf": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"notation": [
+				"ISO_IEC_22602@RC0006"
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "If there is a validated scale of performance level associated with the\ncriteria used by the process, then this process provides\na measurement of a competency.\nExamples: students essays are reviewed according to a given Rubrics\ngrid\nthe performance of the orchestra is appreciated by a jury\nthe resistance of the bridge is tested by the successful\ncrossing of an automated 20-ton truck"
+				}
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Financement",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe représente un financement possible pour la formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Financement"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"notation": [
+				"RC0041"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Formation",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Classe abstraite qui regroupe les propriétés communes décrivant l'organisation pédagogique de la formation dans une institution"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Formation"
+				}
+			],
+			"subClassOf": [
+				"nfr:FormationGenerique",
+				"nfr:ConditionDAcces"
+			],
+			"notation": [
+				"RC0100"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Super classe des classes action de formation, parcours, module, élément de formation et activité pédagogique"
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"isAbstract": true,
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:FormationGenerique",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Classe abstraite qui regroupe les propriétés communes aux offres de formation et aux cas décrivant l'organisation pédagogique d'une formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Formation générique"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"notation": [
+				"RC0050"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Super classe des classes offre de formation et formation"
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"isAbstract": true,
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:FraisDeFormation",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est une dépense pour l'apprenant liée à la participation à la formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Frais de formation"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Les frais d'inscription au BTS SIO ou les frais pédagogiques du même BTS en formation continue"
+				}
+			],
+			"notation": [
+				"RC0040"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Inscription",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe permet de décrire l'inscription à une réalisation de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Inscription"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : l'inscription au BTS SIO pour l'année 2020-2021 se fera au Lycée Flaubert le 1er septembre 2021"
+				}
+			],
+			"notation": [
+				"RC0081"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Institution",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est une entité composée d'êtres humains, organisée dans la durée, en vue d'une finalité et dotée d'une personnalité juridique"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Institution"
+				}
+			],
+			"subClassOf": [
+				"sch:Thing",
+				"rdfs:Resource",
+				"owl:Thing"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Le lycée Flaubert de Rouen"
+				}
+			],
+			"notation": [
+				"ISO_IEC_22602@RC0007"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:LearningResource",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Set of all resources that can be used for learning,\neducation and training"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Learning Resource"
+				}
+			],
+			"subClassOf": [
+				"nfr:Resource"
+			],
+			"notation": [
+				"2011@RC0002"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:ModaliteDeSelection",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe indique une ou plusieurs modalités de sélection pour pouvoir être admis à une offre de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Modalité de sélection"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"notation": [
+				"RC0032"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Ces modalités de sélection sont décrites de manière informelle"
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Module",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est un regroupement temporel ou thématique d'éléments de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Module"
+				}
+			],
+			"subClassOf": [
+				"nfr:Formation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Au lycée Flaubert de Rouen, l'option 1 SLAM solutions logicielles et applications métier du BTS SIO est composée de 2 modules, 1ère année et 2ème année, ce deuxième succédant au premier. Chaque année est composée de 2 modules, 1er semestre et 2eme semestre, le 2ème succédant au 1er"
+				}
+			],
+			"notation": [
+				"RC0103"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:NaturalPerson",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Subset of the resource class Person consisting of human\nbeings"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Natural Person"
+				}
+			],
+			"subClassOf": [
+				"nfr:Person"
+			],
+			"notation": [
+				"2015@RC0001"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:NiveauDeCertification",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe représente un niveau de certification dans un système de codification"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Niveau de certification"
+				}
+			],
+			"subClassOf": [
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Niveau 5 du CEC, niveau 15 du LHÉO"
+				}
+			],
+			"notation": [
+				"RC0017"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:OffreDeFormation",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est une formation décrite au niveau national, cette formation pouvant donner lieu à une attestation ou à préparer à un diplôme, une qualification, un certificat"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Offre de formation"
+				}
+			],
+			"subClassOf": [
+				"nfr:FormationGenerique",
+				"nfr:ConditionDAcces"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : description d'un BTS services informatiques aux organisations (BTS SIO) au niveau national"
+				}
+			],
+			"notation": [
+				"RC0020"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Outcome",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An instance of this class is an observable or measurable result of an action."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Outcome"
+				}
+			],
+			"subClassOf": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"notation": [
+				"ISO_IEC_22602@RC0008"
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "Types and levels of outcome for each action are tacitly agreed by an actor\nand an institution within their contractual relationship.\nExamples: the paper is written by the student on a computer without\nspelling errors\nBeethoven’s 5th Symphony is played by the orchestra in the\nConcert Hall\nthe wooden bridge across the river is built in less than one\nweek"
+				}
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Parcours",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est un itinéraire pédagogique comportant un ou plusieurs éléments de formation spécifiés et ordonnés, organisé selon une ou plusieurs modalités spécifiées, en vue d'atteindre un objectif de développement personnel ou professionnel"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Parcours"
+				}
+			],
+			"subClassOf": [
+				"nfr:Formation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Itinéraire pédagogique en deux ans, en formation initiale, permettant d'acquérir un BTS services informatiques aux organisations (BTS SIO), option 1 SLAM solutions logicielles et applications métier proposé par le lycée Flaubert de Rouen"
+				}
+			],
+			"notation": [
+				"RC0102"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Cette classe se compose d'un ou plusieurs modules."
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:PerimetreDeRecrutement",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe définit le périmètre géorgraphique des personnes qui vont suivre une formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Périmètre de recrutement"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : le département"
+				}
+			],
+			"notation": [
+				"RC0044"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"isAbstract": true,
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Periode",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe définit une période (information, inscription, réalisation, interruption)"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Période"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple :  pour l'année 2020-2021 les étudiants BTS SIO n'ont pas cours du 19 décembre 2020 au 3 janvier 2021"
+				}
+			],
+			"notation": [
+				"RC0090"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Person",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Any entity which is a natural or legal person."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Person"
+				}
+			],
+			"subClassOf": [
+				"nfr:Resource"
+			],
+			"notation": [
+				"2011@RC0003"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Prerequis",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe indique un ou plusieurs prérequis pour pouvoir postuler à une offre de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Prérequis"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"notation": [
+				"RC0031"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Ces prérequis sont exprimés de manière informelle"
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Realisation",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Classe abstraite qui regroupe les propriétés communes décrivant les réalisations programmées d'une offre de formation"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Réalisation"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"notation": [
+				"RC0200"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Superclasse des classes Réalisation de parcours, Réalisation de module, Réalisation de la session de formation et Réalisation de l'activité pédagogique"
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"isAbstract": true,
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:RealisationDActivitePedagogique",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est la réalisation d'une activité pédagogique programmée"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Réalisation d'activité pédagogique"
+				}
+			],
+			"subClassOf": [
+				"nfr:Realisation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Programmation du premier cours magistral de l'activité pédagogique \"Algorithmique appliquée\" de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO le mardi 8 septembre 2020 de 8h à 9h30 en salle 505 du lycée Flaubert de Rouen"
+				}
+			],
+			"notation": [
+				"RC0204"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Une réalisation d'une activité pédagogique est la programmation pendant une période donnée à un endroit donné d'une activité de pédagogique. "
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:RealisationDeModule",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est la réalisation d'un module programmé"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Réalisation de module"
+				}
+			],
+			"subClassOf": [
+				"nfr:Realisation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Le module du 1er semestre de la 1ère année du BTS SIO option 1 SLAM solutions logicielles et applications métier commence en septembre 2020 et finit en janvier 2021 au Lycée Flaubert de Rouen"
+				}
+			],
+			"notation": [
+				"RC0202"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Une réalisation de module est la programmation pendant une période donnée à un endroit donné d'un module de formation. "
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:RealisationDeParcours",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est la réalisation d'un parcours de formation programmé"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Réalisation de parcours"
+				}
+			],
+			"subClassOf": [
+				"nfr:Realisation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Programmation de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO sur la période 2020-2022 au lycée Flaubert de Rouen"
+				}
+			],
+			"notation": [
+				"RC0201"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Une réalisation de parcours est la programmation pendant une période donnée, à un endroit donné."
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Resource",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Set of all entities that can be identified and referenced by\nan unambiguous and stable identifier in a recognized\nidentification system"
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Resource"
+				}
+			],
+			"subClassOf": [
+				"sch:Thing",
+				"rdfs:Resource",
+				"owl:Thing"
+			],
+			"notation": [
+				"2011@RC0001"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Role",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "An instance of this class is any functional position within an institution\nthat an actor in contractual relationship with it is entitled to occupy."
+				}
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Role"
+				}
+			],
+			"subClassOf": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"notation": [
+				"ISO_IEC_22602@RC0009"
+			],
+			"scopeNote": [
+				{
+					"@language": "en",
+					"@value": "Each position is associated with a set of expected competencies, which\nprovides consistency to the instances of role and make the credibility of\nthe player (an actor) for the others.\nExamples: Student\nFirst Violin\nProject Manager"
+				}
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:SessionDInformation",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe présente une réalisation lors d'une session d'information"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Session d'information"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : le BTS SIO option SLAM pour l'année 2020-2021 sera présenté aux étudiants le 4 avril 2020 à 14h"
+				}
+			],
+			"notation": [
+				"RC0080"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:SessionDeFormation",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe est la réalisation d'une session de formation programmée"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Session de formation"
+				}
+			],
+			"subClassOf": [
+				"nfr:Realisation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Programmation de l'élément de formation \"Algorithmique appliquée\" de l'option 1 SLAM solutions logicielles et applications métier du BTS SIO de septembre 2020 à janvier 2021 au lycée Flaubert de Rouen."
+				}
+			],
+			"notation": [
+				"RC0203"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Une session de formation est la programmation pendant une période donnée à un endroit donné d'un élément de formation. "
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:Site",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Classe abstraite qui permet de définir une capacité maximale"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Site"
+				}
+			],
+			"subClassOf": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"notation": [
+				"RC0091"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Super classe des classes Site physique ou numérique"
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"isAbstract": true,
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:SiteNumerique",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe définit les propriétés d'un lieu numérique"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Site numérique"
+				}
+			],
+			"subClassOf": [
+				"nfr:Site"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : http:://monapplication.adistance.fr"
+				}
+			],
+			"notation": [
+				"RC0093"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:SitePhysique",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Classe qui définit un lieu physique"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Site physique"
+				}
+			],
+			"subClassOf": [
+				"nfr:Site"
+			],
+			"notation": [
+				"RC0092"
+			],
+			"scopeNote": [
+				{
+					"@language": "fr",
+					"@value": "Super classe des classes Site physique adresse et standardisé"
+				}
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"isAbstract": true,
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:SitePhysiqueAdresse",
+			"type": [
+				"rdfs:Class"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une instance de cette classe définit les propriétés d'un lieu physique en termes d'adresse en respectant si possible la norme NF Z 10-011"
+				}
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "Site physique adresse"
+				}
+			],
+			"subClassOf": [
+				"nfr:SitePhysique"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : \nLycée Gustave Flaubert\n1 Rue Albert Dupuis,\n76044 Rouen"
+				}
+			],
+			"notation": [
+				"RC0094"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Class_generated"
+			]
+		},
+		{
+			"id": "nfr:aDesConditionsDeRecrutement",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Conditions nécessaires pour pouvoir intégrer la réalisation de la formation"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a des conditions de recrutement"
+				}
+			],
+			"range": [
+				"nfr:Admission"
+			],
+			"notation": [
+				"SED200082001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aEvolueEn",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Historique de la formation"
+				}
+			],
+			"domain": [
+				"nfr:OffreDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a évolué en"
+				}
+			],
+			"range": [
+				"nfr:OffreDeFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "L'offre de formation BTS SIO peut être reliée à l'ancienne offre de formation BTS Informatique de Gestion"
+				}
+			],
+			"notation": [
+				"SED020020002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aLieu",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique où se déroule le recrutement"
+				}
+			],
+			"domain": [
+				"nfr:Admission"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a lieu"
+				}
+			],
+			"range": [
+				"nfr:Site"
+			],
+			"notation": [
+				"SED082091001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aLieuPendant",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique la période pendant laquelle à lieu le recrutement"
+				}
+			],
+			"domain": [
+				"nfr:Admission"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a lieu pendant"
+				}
+			],
+			"range": [
+				"nfr:Periode"
+			],
+			"notation": [
+				"SED082090001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourCode",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le code du lieu physique"
+				}
+			],
+			"domain": [
+				"nfr:SitePhysique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour code"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED092019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourConditionDAcces",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique une condition d'accès au parcours de formation"
+				}
+			],
+			"domain": [
+				"nfr:Parcours"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour condition d'accès"
+				}
+			],
+			"range": [
+				"nfr:ConditionDAcces"
+			],
+			"notation": [
+				"SED102030001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourContact",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique un contact (responsable ou intervenant) pour la réalisation de la formation"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour contact"
+				}
+			],
+			"range": [
+				"nfr:Contact"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Les valeurs de cette propriété sont des instances de la classe RC0018 (contact) pour identifier le responsable ou le(s) intervenant(s) (enseignants, tuteur, etc.) "
+				}
+			],
+			"notation": [
+				"SED200018001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourDomaine",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Regroupement de plusieurs disciplines d'enseignement subdivisé en mention"
+				}
+			],
+			"domain": [
+				"nfr:FormationGenerique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour domaine"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED050019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourModalite",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Modalité de sélection ou de recrutement"
+				}
+			],
+			"domain": [
+				"nfr:ModaliteDeSelection"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour modalité"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED032019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourModaliteDeRecrutement",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique la modalité de recrutement"
+				}
+			],
+			"domain": [
+				"nfr:Admission"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour modalité de recrutement"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Les valeurs de cette propriété sont des instances de la classe RC0019 (Codification) par exemple 3 pour http://lheo.gouv.fr/2.3/lheo/dict-modalite-recrutement.html dans la version 2.3 de LHÉO"
+				}
+			],
+			"notation": [
+				"SED082019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourModalitePedagogique",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique la modalité utilisée pour réaliser l'activité pédagogique"
+				}
+			],
+			"domain": [
+				"nfr:ActivitePedagogique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour modalité pédagogique"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Les valeurs de cette propriété sont des instances de la classe RC0019 (codification) par exemple l'activité pédagogique \"Généralité et opérations de base\" de l'élément de formation \"Mathématiques\" est \"à distance\""
+				}
+			],
+			"notation": [
+				"SED105019002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourNiveau",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Niveau du diplôme d'un système de codification donné"
+				},
+				{
+					"@language": "fr",
+					"@value": "Niveau de formation requis"
+				}
+			],
+			"domain": [
+				"nfr:CertificatBadgeDiplome",
+				"nfr:Prerequis"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour niveau"
+				}
+			],
+			"range": [
+				"nfr:NiveauDeCertification"
+			],
+			"notation": [
+				"SED015017001",
+				"SED031017001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourObjectif",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique les objectifs de la formation en termes de ou des compétences avec leurs niveaux"
+				}
+			],
+			"domain": [
+				"nfr:FormationGenerique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour objectif"
+				}
+			],
+			"range": [
+				"nfr:Competency"
+			],
+			"notation": [
+				"SED050003001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourPerimetre",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique le périmètre géographique de recrutement des candidats"
+				}
+			],
+			"domain": [
+				"nfr:Admission"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": " a pour périmètre"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Les valeurs de cette propriété sont des instances de la classe RC0019 (Codification) par exemple 5 pour http://lheo.gouv.fr/2.3/lheo/dict-perimetre-recrutement.html dans la version 2.3 de LHÉO"
+				}
+			],
+			"notation": [
+				"SED082019002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourPrerequis",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique les prérequis pour la formation en termes de ou des compétences avec leurs niveaux"
+				}
+			],
+			"domain": [
+				"nfr:FormationGenerique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour prérequis"
+				}
+			],
+			"range": [
+				"nfr:Competency"
+			],
+			"notation": [
+				"SED050003002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourSessionDInformation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Session durant laquelle la réalisation est présentée"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour session d'information"
+				}
+			],
+			"range": [
+				"nfr:SessionDInformation"
+			],
+			"notation": [
+				"SED200080001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourSuivant",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Permet d'ordonnancer les modules"
+				}
+			],
+			"domain": [
+				"nfr:Module"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour suivant"
+				}
+			],
+			"range": [
+				"nfr:Module"
+			],
+			"notation": [
+				"SED103103002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourType",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Permet de préciser le type de contrat d'alternance"
+				}
+			],
+			"domain": [
+				"nfr:Alternance"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour type"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED042019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourTypeDActivite",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Définit un type d'activité pédagogique et/ou d'apprentissage pour l'activité pédagogique"
+				}
+			],
+			"domain": [
+				"nfr:ActivitePedagogique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": " a pour type d'activité"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Les valeurs de cette propriété sont des instances de la classe RC0019 (codification) par exemple l'activité pédagogique \"Généralité et opérations de base\" de l'élément de formation \"Mathématiques\" est un \"cours\""
+				}
+			],
+			"notation": [
+				"SED105019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourTypeDEnseignement",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le type d'enseignement"
+				}
+			],
+			"domain": [
+				"nfr:Composition"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour type d'enseignement"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED060019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourTypeDeContact",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Type de contact"
+				}
+			],
+			"domain": [
+				"nfr:Contact"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour type de contact"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED018019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourTypeDeFrais",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Type de frais"
+				}
+			],
+			"domain": [
+				"nfr:FraisDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour type de frais"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED040019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:aPourUniteDeTemps",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Permet de préciser le l'unité de temps utilisé par les propriétés SED042001 (temps entreprise) et SED042002 (temps centre)"
+				}
+			],
+			"domain": [
+				"nfr:Alternance"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "a pour unité de temps"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED042019002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:accessibilite",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Information concernant l'accessibilité du site (physique ou numérique)"
+				}
+			],
+			"domain": [
+				"nfr:Site"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "accessibilité"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"SED091002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:acronyme",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Acronyme officiel de la formation"
+				}
+			],
+			"domain": [
+				"nfr:OffreDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "acronyme"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "BTS SIO"
+				}
+			],
+			"notation": [
+				"SED020004"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:assesses",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an evaluation, or assessment process to outcomes."
+				}
+			],
+			"domain": [
+				"nfr:EvaluationAssessmentProcess"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "assesses"
+				}
+			],
+			"range": [
+				"nfr:Outcome"
+			],
+			"notation": [
+				"DES0036"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:capaciteCumulee",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Nombre maximal d'apprenants pouvant être inscrits à la session de formation"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "capacité cumulée"
+				}
+			],
+			"range": [
+				"xsd:nonNegativeInteger",
+				"sch:Integer"
+			],
+			"notation": [
+				"SED200004"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:capaciteDAccueil",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Nombre maximal de participants"
+				}
+			],
+			"domain": [
+				"nfr:Site"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "capacité d'accueil"
+				}
+			],
+			"range": [
+				"xsd:nonNegativeInteger",
+				"sch:Integer"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "200"
+				}
+			],
+			"notation": [
+				"SED091001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:capaciteSimultanee",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Nombre maximal d'apprenants pouvant suivre la session de formation"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "capacité simultanée"
+				}
+			],
+			"range": [
+				"xsd:nonNegativeInteger",
+				"sch:Integer"
+			],
+			"notation": [
+				"SED200005"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:chargeDeTravail",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Durée moyenne du travail pour l'apprenant en prenant en compte toutes les activités "
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "charge de travail"
+				}
+			],
+			"range": [
+				"xsd:duration",
+				"sch:Duration"
+			],
+			"notation": [
+				"SED100002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:code",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Code \"humain\" permettant de désigner de manière non ambigüe un élément"
+				},
+				{
+					"@language": "fr",
+					"@value": "code de la codification"
+				}
+			],
+			"domain": [
+				"nfr:EntiteDuMondeDeLaFormation",
+				"nfr:Codification"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "code"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Au CNED le BTS SIO est identifié par le code \"8TSI1DIX20\""
+				},
+				{
+					"@language": "fr",
+					"@value": "15"
+				}
+			],
+			"notation": [
+				"SED000003",
+				"SED019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:codeCommune",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Code INSEE : contient cinq chiffres ou lettres (concaténation du code département et de la codification sur trois chiffres de la commune ou de l'arrondissement municipal à Paris, Lyon et Marseille, ou sur deux chiffres pour les communes en outre-mer). Il est le plus employé dans les données statistiques de l'Insee, et est utilisé aussi dans les numéros d'identité et d'état civil des personnes physiques"
+				}
+			],
+			"domain": [
+				"nfr:SitePhysiqueAdresse"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "code commune"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"notation": [
+				"SED094005"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:codePostal",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique le code postal de l'adresse"
+				}
+			],
+			"domain": [
+				"nfr:SitePhysiqueAdresse"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "code postal"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "76000"
+				}
+			],
+			"notation": [
+				"SED094006"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:codeUai",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le code Unité Administrative Immatriculée (aussi appelé code éducation nationale) de l'établissement"
+				}
+			],
+			"domain": [
+				"nfr:Institution"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "code UAI"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"notation": [
+				"SED007006"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:commentaire",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "informations complémentaires"
+				},
+				{
+					"@language": "fr",
+					"@value": "Permet de préciser le rôle de la composition"
+				},
+				{
+					"@language": "fr",
+					"@value": "Permet d'ajouter un commentaire à la période"
+				}
+			],
+			"domain": [
+				"nfr:Equipement",
+				"nfr:Composition",
+				"nfr:Periode"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "commentaire"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Le lycée Flaubert est fermé pendant les vacances de Noël"
+				}
+			],
+			"notation": [
+				"SED043003",
+				"SED060001",
+				"SED090003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:complement",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Permet de compléter une adresse et d'indiquer un complément sur l'hébergement"
+				}
+			],
+			"domain": [
+				"nfr:SitePhysique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "complément"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Bâtiment B, Étage 2"
+				}
+			],
+			"notation": [
+				"SED092001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:conditionDAcces",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Conditions d'accès aux actions de formation de cette offre"
+				}
+			],
+			"domain": [
+				"nfr:OffreDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "condition d'accès"
+				}
+			],
+			"range": [
+				"nfr:ConditionDAcces"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "L'offre de formation BTS SIO option SISR peut être reliée à une modalité de sélection représentant ici un bac général, le bac pro Système Numérique, les bacs techniques (STMG, STI2D), des entretiens, etc."
+				}
+			],
+			"notation": [
+				"SED020030001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:conditionDeValidation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Règles permettant de valider la formation"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "condition de validation"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Validation de la première année du BTS SIO :\n- Un relevé de notes est établi à l’issue de l’année de formation.\n- Le passage de première en seconde année est soumis à l’avis d’un conseil de classe."
+				}
+			],
+			"notation": [
+				"SED100005"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:conditionsDAcces",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique les conditions d'accès à la formation action de formation"
+				}
+			],
+			"domain": [
+				"nfr:ActionDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "conditions d'accès"
+				}
+			],
+			"range": [
+				"nfr:ConditionDAcces"
+			],
+			"notation": [
+				"SED101030001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:contact",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique des contacts pour la formation et leurs rôles"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "contact"
+				}
+			],
+			"range": [
+				"nfr:Contact"
+			],
+			"notation": [
+				"SED100018001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:contributeur",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Contributeur de la dernière modification de l'information"
+				}
+			],
+			"domain": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "contributeur"
+				}
+			],
+			"range": [
+				"nfr:NaturalPerson"
+			],
+			"notation": [
+				"SED000003001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:coordonneesGps",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Permet de spécifier les coordonnées GPS d'un lieu physique"
+				}
+			],
+			"domain": [
+				"nfr:SitePhysique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "coordonnées GPS"
+				}
+			],
+			"range": [
+				"nfr:CoordonneesGps"
+			],
+			"notation": [
+				"SED092096001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:creditsEcts",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le nombre de crédits ECTS obtenu à l'issue de la validation de la formation (certification  validée)"
+				}
+			],
+			"domain": [
+				"nfr:FormationGenerique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "crédits ECTS"
+				}
+			],
+			"range": [
+				"nfr:CreditsEcts"
+			],
+			"notation": [
+				"SED050070001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:dateDExport",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Date de la dernière publication"
+				}
+			],
+			"domain": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "date d'export"
+				}
+			],
+			"range": [
+				"xsd:dateTime"
+			],
+			"notation": [
+				"SED000005"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:dateDHabilitation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Date d'obtention de l'habilitation"
+				}
+			],
+			"domain": [
+				"nfr:Certification"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "date d'habilitation"
+				}
+			],
+			"range": [
+				"xsd:date",
+				"sch:Date"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "2000"
+				}
+			],
+			"notation": [
+				"SED016001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:dateDeCreation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Date de création de l'information"
+				}
+			],
+			"domain": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "date de création"
+				}
+			],
+			"range": [
+				"xsd:dateTime"
+			],
+			"notation": [
+				"SED000004"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:dateDeMiseAJour",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Dernière date de modification d'une information d'un élément"
+				}
+			],
+			"domain": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "date de mise à jour"
+				}
+			],
+			"range": [
+				"xsd:dateTime"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Pour une instance de la Classe RC0105 Activité pédagogique, le changement de modalité pédagogique sera daté"
+				}
+			],
+			"notation": [
+				"SED000002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:debut",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique la date de début de la période"
+				}
+			],
+			"domain": [
+				"nfr:Periode"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "début"
+				}
+			],
+			"range": [
+				"xsd:date",
+				"sch:Date"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "2020-12-19"
+				}
+			],
+			"notation": [
+				"SED090001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:delivre",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique qu'une institution délivre une certification"
+				}
+			],
+			"domain": [
+				"nfr:Institution"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "délivre"
+				}
+			],
+			"range": [
+				"nfr:Certification"
+			],
+			"notation": [
+				"SED007016001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:description",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Description du diplôme, certificat ou badge"
+				},
+				{
+					"@language": "fr",
+					"@value": "Description d'un ou plusieurs prérequis"
+				},
+				{
+					"@language": "fr",
+					"@value": "Complément d'information sur le montant et/ou le type"
+				},
+				{
+					"@language": "fr",
+					"@value": "Résumé descriptif de l'offre de formation"
+				}
+			],
+			"domain": [
+				"nfr:CertificatBadgeDiplome",
+				"nfr:Prerequis",
+				"nfr:FraisDeFormation",
+				"nfr:FormationGenerique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "description"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "L'ONISEP décrit le BTS SIO de la façon suivante : \"Couvrant tous les secteurs professionnels, les BTS forment des collaborateurs d'ingénieur, des assistants commerciaux ou techniques, des assistants clientèle, des chefs de chantier, etc. selon les secteurs. Le BTS se prépare en 2 ans après le bac en lycée, en école ou par l'apprentissage. Le recrutement se fait sur dossier. Une mise à niveau de 1 an est obligatoire pour l'accès en BTS management en hôtellerie-restauration pour les élèves n'étant pas titulaires du bac sciences et technologies de l'hôtellerie et de la restauration (STHR). Les BTS visent une insertion professionnelle directe. Poursuite d'études possible, notamment en licence pro (pour 1 an).\""
+				}
+			],
+			"notation": [
+				"SED015001",
+				"SED031001",
+				"SED040004",
+				"SED050001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:devise",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Devise du montant"
+				},
+				{
+					"@language": "fr",
+					"@value": "devise du montant"
+				}
+			],
+			"domain": [
+				"nfr:FraisDeFormation",
+				"nfr:Equipement"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "devise"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:currency",
+				"nfr:SpecialCase"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "EUR"
+				}
+			],
+			"notation": [
+				"SED040002",
+				"SED043002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:dureeDHabilitation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Durée de validité de l'habilitation"
+				}
+			],
+			"domain": [
+				"nfr:Certification"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "durée d'habilitation"
+				}
+			],
+			"range": [
+				"xsd:duration",
+				"sch:Duration"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "6 ans"
+				}
+			],
+			"notation": [
+				"SED016002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:dureeDeStageEnEntreprise",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique la durée de stage en entreprise"
+				}
+			],
+			"domain": [
+				"nfr:FormationGenerique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "durée de stage en entreprise"
+				}
+			],
+			"range": [
+				"xsd:duration",
+				"sch:Duration"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Le stage de première année du BTS SIO correspond à 140h"
+				}
+			],
+			"notation": [
+				"SED050003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:dureeDesEnseignements",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique la durée de formation dans l'établissement de formation ou à distance concernant les aspects pédagogiques hors entreprise"
+				}
+			],
+			"domain": [
+				"nfr:FormationGenerique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "durée des enseignements"
+				}
+			],
+			"range": [
+				"xsd:duration",
+				"sch:Duration"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "La première année du BTS SIO correspond à 900h"
+				}
+			],
+			"notation": [
+				"SED050002"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:dureeEnEntreprise",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique la durée en entreprise de l'alternance"
+				}
+			],
+			"domain": [
+				"nfr:Alternance"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "durée en entreprise"
+				}
+			],
+			"range": [
+				"xsd:duration",
+				"sch:Duration"
+			],
+			"notation": [
+				"SED042001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:effectifMinimal",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Effectif minimal requis pour que la session de formation puisse avoir lieu"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "effectif minimal"
+				}
+			],
+			"range": [
+				"xsd:nonNegativeInteger",
+				"sch:Integer"
+			],
+			"notation": [
+				"SED200003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:elementConstituant",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le ou les éléments de formation qui sont inclus dans une composition"
+				}
+			],
+			"domain": [
+				"nfr:Composition"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "élément constituant"
+				}
+			],
+			"range": [
+				"nfr:ElementDeFormation"
+			],
+			"notation": [
+				"SED060104001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:entreeSortiePermanente",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Les dates de début et de fin indiquent des bornes au sein de laquelle la réalisation doit avoir lieu"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "entrée sortie permanente"
+				}
+			],
+			"range": [
+				"xsd:boolean",
+				"sch:Boolean"
+			],
+			"notation": [
+				"SED200001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:estAutoriseADelivrerPar",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Habilitation ou certificat permettant de délivrer un diplôme, un certificat, un badge, une attestation, etc."
+				}
+			],
+			"domain": [
+				"nfr:CertificatBadgeDiplome"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "est autorisé à délivrer par"
+				}
+			],
+			"range": [
+				"nfr:Certification"
+			],
+			"notation": [
+				"SED015016001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:estCertifiePar",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique que l'action de formation respecte le référentiel d'une certification qualité"
+				}
+			],
+			"domain": [
+				"nfr:ActionDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "est certifié par"
+				}
+			],
+			"range": [
+				"nfr:Certification"
+			],
+			"notation": [
+				"SED101016001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:estCodifiePar",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Permet de codifier une certificat, un badge ou un diplome"
+				}
+			],
+			"domain": [
+				"nfr:CertificatBadgeDiplome"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "est codifié par"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "RNCP35340"
+				}
+			],
+			"notation": [
+				"SED015019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:estFinancePar",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Financeur du financement de la formation"
+				}
+			],
+			"domain": [
+				"nfr:Financement"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "est financé par"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED041019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:estFinancee",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique un financement conventionné possible de la formation"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "est financée"
+				}
+			],
+			"range": [
+				"nfr:Financement"
+			],
+			"notation": [
+				"SED100041001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:estLocalise",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique où se situe l'institution"
+				}
+			],
+			"domain": [
+				"nfr:Institution"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "est localisé"
+				}
+			],
+			"range": [
+				"nfr:Site"
+			],
+			"notation": [
+				"SED007090001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:estMaterialisee",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "L'offre de formation est matérialisée dans un ou plusieurs établissements"
+				}
+			],
+			"domain": [
+				"nfr:OffreDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "est matérialisée"
+				}
+			],
+			"range": [
+				"nfr:ActionDeFormation"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "L'offre de formation BTS SIO est reliée avec l'Action de formation BTS SIO du Lycée Gustave Flaubert de Rouen"
+				}
+			],
+			"notation": [
+				"SED020101001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:estMiseEnOeuvreDans",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "La réalisation pédagogique met en œuvre des actions de formation"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "est mise en oeuvre dans "
+				}
+			],
+			"range": [
+				"nfr:Action"
+			],
+			"notation": [
+				"SED20001001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:estPrerequis",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique qu'une formation est prérequise d'une autre"
+				}
+			],
+			"domain": [
+				"nfr:FormationGenerique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "est prérequis"
+				}
+			],
+			"range": [
+				"nfr:FormationGenerique"
+			],
+			"notation": [
+				"SED050050001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:fin",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique la date de fin de la période"
+				}
+			],
+			"domain": [
+				"nfr:Periode"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "fin"
+				}
+			],
+			"range": [
+				"xsd:date",
+				"sch:Date"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "2021-01-03"
+				}
+			],
+			"notation": [
+				"SED090002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:generates",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an action with one or more outcomes."
+				}
+			],
+			"domain": [
+				"nfr:Action"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "generates"
+				}
+			],
+			"range": [
+				"nfr:Outcome"
+			],
+			"notation": [
+				"DES0005"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:getsConsistencyFrom",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of a role and competency."
+				}
+			],
+			"domain": [
+				"nfr:Role"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "gets consistency from"
+				}
+			],
+			"range": [
+				"nfr:Competency"
+			],
+			"notation": [
+				"DES0037"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:hasAContractualRelationshipWith",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an actor and an institution by some sort of contract\nsuch as membership for an association, employment contract or ap-\nprenticeship contract for a company, enrolment in a school or\nregistration at a university, etc."
+				}
+			],
+			"domain": [
+				"nfr:Actor"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "has a contractual relationship with"
+				}
+			],
+			"range": [
+				"nfr:Institution"
+			],
+			"notation": [
+				"DES0004"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:hasAppellation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns appellation to an instance of a competency world entity."
+				}
+			],
+			"domain": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "has appellation"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "en",
+					"@value": "From Annex A:\n1) this data property links actor (entity denoted by Student_ref_DB\n06-2016) to an appellation (Albert M.)\n2) this data property links institution (entity denoted by RNCP :\norganization 75-332) to an appellation (CESI)"
+				}
+			],
+			"notation": [
+				"DES0102"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:hasDescription",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns description to an instance of a competency world entity."
+				}
+			],
+			"domain": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "has description"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "en",
+					"@value": "From Annex A:\n1) this data property links actor (entity denoted by Student_\nref_DB 06-2016) to a description (System Administrator at\nMacrosoft France)\n2) this data property links Institution (Entity denoted by RNCP :\norganization 75-332) to description (this centre is part of the\nCESI South-East Region)"
+				}
+			],
+			"notation": [
+				"DES0103"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:hasIdentifier",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns an identifier to an instance of a Competency World Entity."
+				}
+			],
+			"domain": [
+				"nfr:CompetencyWorldEntity"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "has identifier"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "en",
+					"@value": "From Annex A:\n1) this data property links actor (entity denoted by Student_ref_DB\n06-2016) to an identifier (2010453)\n2) this data property links institution (entity denoted by RNCP :\norganization 75-332) to an identifier (SIRET 775722572 00648)"
+				}
+			],
+			"notation": [
+				"DES0101"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:indiceDeRepetition",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique la répétition éventuelle du numéro de la rue"
+				}
+			],
+			"domain": [
+				"nfr:SitePhysiqueAdresse"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "indice de répétition"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"notation": [
+				"SED094002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:influences",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an environment to an action."
+				}
+			],
+			"domain": [
+				"nfr:Environment"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "influences"
+				}
+			],
+			"range": [
+				"nfr:Action"
+			],
+			"notation": [
+				"DES0008"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:information",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Information sur le processus d'inscription"
+				}
+			],
+			"domain": [
+				"nfr:Inscription"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "information"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"SED081001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:informationPublicCible",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Information complémentaire sur les publics ciblés"
+				}
+			],
+			"domain": [
+				"nfr:ActionDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "information public ciblé"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"SED101002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:informationsComplementaires",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Toute information qui permet de préciser le financement"
+				}
+			],
+			"domain": [
+				"nfr:Financement"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "informations complémentaires"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"SED041003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:informationsComplementairesSurLePerimetre",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "informations complémentaires sur le périmètre géographique de recrutement"
+				}
+			],
+			"domain": [
+				"nfr:PerimetreDeRecrutement"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "informations complémentaires sur le périmètre"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"SED044001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:inscription",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Relation permettant de décrire des inscriptions à la réalisation"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "inscription"
+				}
+			],
+			"range": [
+				"nfr:Inscription"
+			],
+			"notation": [
+				"SED200081001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isAssessedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of outcomes to an evaluation, or assessment process."
+				}
+			],
+			"domain": [
+				"nfr:Outcome"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is assessed by"
+				}
+			],
+			"range": [
+				"nfr:EvaluationAssessmentProcess"
+			],
+			"notation": [
+				"DES0016"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isDefinedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of criteria and methods to an institution."
+				}
+			],
+			"domain": [
+				"nfr:CriteriaAndMethod"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is defined by"
+				}
+			],
+			"range": [
+				"nfr:Institution"
+			],
+			"notation": [
+				"DES0034"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isExpectedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an action to an institution."
+				}
+			],
+			"domain": [
+				"nfr:Action"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is expected by"
+				}
+			],
+			"range": [
+				"nfr:Institution"
+			],
+			"notation": [
+				"DES0030"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isGeneratedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an outcome with an action."
+				}
+			],
+			"domain": [
+				"nfr:Outcome"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is generated by"
+				}
+			],
+			"range": [
+				"nfr:Action"
+			],
+			"notation": [
+				"DES0025"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isInfluencedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an action to an environment."
+				}
+			],
+			"domain": [
+				"nfr:Action"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is influenced by"
+				}
+			],
+			"range": [
+				"nfr:Environment"
+			],
+			"notation": [
+				"DES0028"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isMeasuredBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association between a competency and an evaluation or\nassessment process."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is measured by"
+				}
+			],
+			"range": [
+				"nfr:EvaluationAssessmentProcess"
+			],
+			"notation": [
+				"DES0029"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isPerformedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of a future, ongoing or past action to an actor."
+				}
+			],
+			"domain": [
+				"nfr:Action"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is performed by"
+				}
+			],
+			"range": [
+				"nfr:Actor"
+			],
+			"notation": [
+				"DES0022"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isPlayedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association between a role and an actor."
+				}
+			],
+			"domain": [
+				"nfr:Role"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is played by"
+				}
+			],
+			"range": [
+				"nfr:Actor"
+			],
+			"notation": [
+				"DES0023"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isProvidedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an evaluation or assessment process to an institution."
+				}
+			],
+			"domain": [
+				"nfr:EvaluationAssessmentProcess"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is provided by"
+				}
+			],
+			"range": [
+				"nfr:Institution"
+			],
+			"notation": [
+				"DES0033"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isRequiredBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of a competency with an action."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is required by"
+				}
+			],
+			"range": [
+				"nfr:Action"
+			],
+			"notation": [
+				"DES0026"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isSetBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of a role to an institution."
+				}
+			],
+			"domain": [
+				"nfr:Role"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is set by"
+				}
+			],
+			"range": [
+				"nfr:Institution"
+			],
+			"notation": [
+				"DES0032"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isShapedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an environment to an institution."
+				}
+			],
+			"domain": [
+				"nfr:Environment"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is shaped by"
+				}
+			],
+			"range": [
+				"nfr:Institution"
+			],
+			"notation": [
+				"DES0031"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isShownBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of a demonstrated competency to an actor through\nbehaviour or achievement."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is shown by"
+				}
+			],
+			"range": [
+				"nfr:Actor"
+			],
+			"notation": [
+				"DES0021"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:isUsedBy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of criteria and methods with an evaluation or an\nassessment process."
+				}
+			],
+			"domain": [
+				"nfr:CriteriaAndMethod"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "is used by"
+				}
+			],
+			"range": [
+				"nfr:EvaluationAssessmentProcess"
+			],
+			"notation": [
+				"DES0027"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:langueDeFormation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Langue dans laquelle est délivrée la formation"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "langue de formation"
+				}
+			],
+			"range": [
+				"xsd:lang",
+				"sch:Language"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "fra"
+				}
+			],
+			"notation": [
+				"SED100001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:latitude",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique la latitude"
+				}
+			],
+			"domain": [
+				"nfr:CoordonneesGps"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "latitude"
+				}
+			],
+			"range": [
+				"xsd:integer",
+				"sch:Integer"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "49.45103"
+				}
+			],
+			"notation": [
+				"SED096001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:libelle",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Nommage humainement compréhensible de l'élément"
+				}
+			],
+			"domain": [
+				"nfr:EntiteDuMondeDeLaFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "libellé"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Pour une instance de la classe RC0020 Offre de formation, le libellé pourrait être \"BTS services informatiques aux organisations\""
+				}
+			],
+			"notation": [
+				"SED000001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:lieu",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Lieu de la session d'information"
+				},
+				{
+					"@language": "fr",
+					"@value": "Lieu de l'inscription"
+				}
+			],
+			"domain": [
+				"nfr:SessionDInformation",
+				"nfr:Inscription"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "lieu"
+				}
+			],
+			"range": [
+				"nfr:Site"
+			],
+			"notation": [
+				"SED080091001",
+				"SED081091001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:lieuDHebergement",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Lieu d'hébergement proposé"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "lieu d'hébergement"
+				}
+			],
+			"range": [
+				"nfr:SitePhysique"
+			],
+			"notation": [
+				"SED200092001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:lieuDeRealisation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Lieu où se déroule la réalisation"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "lieu de réalisation"
+				}
+			],
+			"range": [
+				"nfr:Site"
+			],
+			"notation": [
+				"SED200091001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:lieuDeRestauration",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Lieu de restauration proposé"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "lieu de restauration"
+				}
+			],
+			"range": [
+				"nfr:SitePhysique"
+			],
+			"notation": [
+				"SED200092002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:ligne",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Désigne la rue, la voie, le boulevard, etc. de l'adresse"
+				}
+			],
+			"domain": [
+				"nfr:SitePhysiqueAdresse"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "ligne"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Rue Albert Dupuis"
+				}
+			],
+			"notation": [
+				"SED094003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:localisation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Identifiant permettant d'accéder au site numérique"
+				}
+			],
+			"domain": [
+				"nfr:SiteNumerique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "localisation"
+				}
+			],
+			"range": [
+				"xsd:anyURI",
+				"sch:Text",
+				"nfr:SpecialCase"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "http:://monapplication.adistance.fr"
+				}
+			],
+			"notation": [
+				"SED093001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:longitude",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique la longitude"
+				}
+			],
+			"domain": [
+				"nfr:CoordonneesGps"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "longitude"
+				}
+			],
+			"range": [
+				"xsd:integer",
+				"sch:Integer"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "1.12198"
+				}
+			],
+			"notation": [
+				"SED096002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:materialise",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "L'action de formation matérialise une offre de formation au sein d'un établissement"
+				}
+			],
+			"domain": [
+				"nfr:ActionDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "matérialise"
+				}
+			],
+			"range": [
+				"nfr:OffreDeFormation"
+			],
+			"notation": [
+				"SED101020001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:meaningEssentialObject",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns an object to a Competency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Meaning - Essential Object"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3002"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:meaningEssentialVerb",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns an action verb to a Competency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Meaning - Essential Verb"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3001"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:metierVise",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Métier(s) au(x)quel(s) donne(nt) accès la formation"
+				}
+			],
+			"domain": [
+				"nfr:OffreDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "métier visé"
+				}
+			],
+			"range": [
+				"nfr:SpecialCase"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "M1801 (administration des sytsèmes d'information), métier issu du référentiel ROME"
+				}
+			],
+			"notation": [
+				"SED020003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:modalite",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Modalité de reconnaissance ou de validation du diplome du certificat ou du badge"
+				},
+				{
+					"@language": "fr",
+					"@value": "Statut, situation de l'apprenant\n"
+				}
+			],
+			"domain": [
+				"nfr:CertificatBadgeDiplome",
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "modalité"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text",
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Exemple : Pour obtenir le BTS SIO il faut avoir obtenu 120 crédits ECTS"
+				},
+				{
+					"@language": "fr",
+					"@value": "formation initiale\nformation continue\n"
+				}
+			],
+			"notation": [
+				"SED015002",
+				"SED100019005"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:modaliteDEvaluation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Modalité d'évaluation de l'élément de formation"
+				}
+			],
+			"domain": [
+				"nfr:ElementDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "modalité d'évaluation"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "L'élément de formation \"Mathématiques\" du module \"Mathématiques pour l'informatique\" du module \"Premier semestre\" est évalué à l'aide \"d'un examen sur table et d'un projet\""
+				}
+			],
+			"notation": [
+				"SED104001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:modaliteDeSelection",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "La méthode de sélection permettant de retenir un candidat"
+				}
+			],
+			"domain": [
+				"nfr:ConditionDAcces"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "modalité de sélection"
+				}
+			],
+			"range": [
+				"nfr:ModaliteDeSelection"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "L'offre de formation BTS SIO peut être reliée vers une modalité de sélection sur dossier"
+				}
+			],
+			"notation": [
+				"SED030032001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:montant",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Montant total de la formation"
+				},
+				{
+					"@language": "fr",
+					"@value": "montant de l'équipement avec la TVA"
+				}
+			],
+			"domain": [
+				"nfr:FraisDeFormation",
+				"nfr:Equipement"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "montant"
+				}
+			],
+			"range": [
+				"xsd:float",
+				"sch:Integer"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "350"
+				}
+			],
+			"notation": [
+				"SED040001",
+				"SED043001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:nature",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le type, la nature de l'institution"
+				}
+			],
+			"domain": [
+				"nfr:Institution"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "nature"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Les valeurs de cette propriété sont des instances de la classe RC0019 (codification) représentant la nature de l'institution : établissement d'enseignement, organisme de formation, organisme certificateur"
+				}
+			],
+			"notation": [
+				"SED007019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:necessiteLEquipement",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique les équipements nécessaires à la formation"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "nécessite l'équipement"
+				}
+			],
+			"range": [
+				"nfr:Equipement"
+			],
+			"notation": [
+				"SED100043001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:niveauDeSortie",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le niveau de formation obtenu à la fin de la formation si le certificat est validé"
+				}
+			],
+			"domain": [
+				"nfr:OffreDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "niveau de sortie"
+				}
+			],
+			"range": [
+				"nfr:NiveauDeCertification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "L'offre de formation BTS SIO peut être reliée au niveau de certification 5 du CEC"
+				}
+			],
+			"notation": [
+				"SED020017001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:niveauEnSortie",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "niveau de formation acquis en sortie de la formation"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "niveau en sortie"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED100019004"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:nombreDHeuresFinancees",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Nombre d'heures financées par convention"
+				}
+			],
+			"domain": [
+				"nfr:Financement"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "nombre d'heures financées"
+				}
+			],
+			"range": [
+				"xsd:duration",
+				"sch:Duration"
+			],
+			"notation": [
+				"SED041002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:nombreDeCredits",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Nombre de crédits ECTS associé à une offre de formation, un parcours, un module, un élément de formation ou une activité pédagogique"
+				}
+			],
+			"domain": [
+				"nfr:CreditsEcts"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "nombre de crédits"
+				}
+			],
+			"range": [
+				"xsd:float",
+				"sch:Integer"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "La formation BTS SIO permet d'obtenir 120 ECTS"
+				}
+			],
+			"notation": [
+				"SED070001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:nombreDePlaces",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique le nombre de places maximale dans la formation"
+				}
+			],
+			"domain": [
+				"nfr:Admission"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "nombre de places"
+				}
+			],
+			"range": [
+				"xsd:nonNegativeInteger",
+				"sch:Integer"
+			],
+			"notation": [
+				"SED082001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:nombreDePlacesFinancees",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Nombre de places maximal pouvant être financées"
+				}
+			],
+			"domain": [
+				"nfr:Financement"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "nombre de places financées"
+				}
+			],
+			"range": [
+				"xsd:nonNegativeInteger",
+				"sch:Integer"
+			],
+			"notation": [
+				"SED041001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:nombreMaximal",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Spécifie le nombre maximal d'éléments de formation à choisir parmi les éléments de formation constituant la composition"
+				}
+			],
+			"domain": [
+				"nfr:CompositionAChoix"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "nombre maximal"
+				}
+			],
+			"range": [
+				"xsd:nonNegativeInteger",
+				"sch:Integer"
+			],
+			"notation": [
+				"SED063002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:nombreMinimal",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Spécifie le nombre minimal d'éléments de formation à choisir parmi les éléments de formation constituant la composition"
+				}
+			],
+			"domain": [
+				"nfr:CompositionAChoix"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "nombre minimal"
+				}
+			],
+			"range": [
+				"xsd:nonNegativeInteger",
+				"sch:Integer"
+			],
+			"notation": [
+				"SED063001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:numeroDeDeclarationDActivite",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le numéro de déclaration d'activité"
+				}
+			],
+			"domain": [
+				"nfr:Institution"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "numéro de déclaration d'activité"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"notation": [
+				"SED007005"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:numeroDeRue",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le numéro de la rue"
+				}
+			],
+			"domain": [
+				"nfr:SitePhysiqueAdresse"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "numéro de rue"
+				}
+			],
+			"range": [
+				"xsd:nonNegativeInteger",
+				"sch:Integer"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "1"
+				}
+			],
+			"notation": [
+				"SED094001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:objectifGeneral",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Objectif général de la formation"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "objectif général"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED100019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:obligatoire",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique si le prérequis est obligatoire ou souhaité"
+				}
+			],
+			"domain": [
+				"nfr:Prerequis"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "obligatoire"
+				}
+			],
+			"range": [
+				"xsd:boolean",
+				"sch:Boolean"
+			],
+			"notation": [
+				"SED031002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:pays",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique le pays de l'adresse"
+				}
+			],
+			"domain": [
+				"nfr:SitePhysiqueAdresse"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "pays"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "France"
+				}
+			],
+			"notation": [
+				"SED094007"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:performs",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an actor to a future, ongoing or past action."
+				}
+			],
+			"domain": [
+				"nfr:Actor"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "performs"
+				}
+			],
+			"range": [
+				"nfr:Action"
+			],
+			"notation": [
+				"DES0002"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:perimetreGeographiqueDeRecrutement",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique le périmètre de recrutement"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "périmètre géographique de recrutement"
+				}
+			],
+			"range": [
+				"nfr:PerimetreDeRecrutement"
+			],
+			"notation": [
+				"SED100044001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:periode",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique la durée de la période de la formation la plus pratiquée (indication pour l'apprenant)"
+				},
+				{
+					"@language": "fr",
+					"@value": "Période de la session d'information"
+				},
+				{
+					"@language": "fr",
+					"@value": "Période de l'inscription"
+				}
+			],
+			"domain": [
+				"nfr:FormationGenerique",
+				"nfr:SessionDInformation",
+				"nfr:Inscription"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "période"
+				}
+			],
+			"range": [
+				"xsd:duration",
+				"sch:Duration",
+				"nfr:Periode"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "La première année du BTS SIO dure 10 mois"
+				}
+			],
+			"notation": [
+				"SED050004",
+				"SED080090001",
+				"SED081090001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:periodeDInterruption",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Période durant laquelle la formation est interrompue"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "période d'interruption"
+				}
+			],
+			"range": [
+				"nfr:Periode"
+			],
+			"notation": [
+				"SED200090003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:periodeEnCentreDeFormation",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Période durant laquelle a lieu la réalisation en centre de formation"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "période en centre de formation"
+				}
+			],
+			"range": [
+				"nfr:Periode"
+			],
+			"notation": [
+				"SED200090001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:periodeEnEntreprise",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Période durant laquelle a lieu la réalisation en centre de formation"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "période en entreprise"
+				}
+			],
+			"range": [
+				"nfr:Periode"
+			],
+			"notation": [
+				"SED200090002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:permetDObtenir",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le certificat, badge ou diplôme associé à la formation"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "permet d'obtenir"
+				}
+			],
+			"range": [
+				"nfr:CertificatBadgeDiplome"
+			],
+			"notation": [
+				"SED100015001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:personne",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": ""
+				}
+			],
+			"domain": [
+				"nfr:Contact"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "personne"
+				}
+			],
+			"range": [
+				"xsd:string"
+			],
+			"notation": [
+				"SED018001001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:placementSiteInTaxonomy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a position in a placement taxonomy to a\nCompetency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Placement - Site in Taxonomy"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3019"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:placementTaxonomy",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a placement taxonomy to a Competency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Placement - Taxonomy"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3018"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:plays",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association between an actor and a role."
+				}
+			],
+			"domain": [
+				"nfr:Actor"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "plays"
+				}
+			],
+			"range": [
+				"nfr:Role"
+			],
+			"notation": [
+				"DES0003"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:positionnement",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique le type de posionnement"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "positionnement"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED100019003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:potentiel",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique le domaine de compétences, le champ disciplinaire de l'institution"
+				}
+			],
+			"domain": [
+				"nfr:Institution"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "potentiel"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Les valeurs de cette propriété sont des instances de la classe RC0019 (codification) issues du FORMACODE "
+				}
+			],
+			"notation": [
+				"SED007019002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:prerequis",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Les prérequis sont les caractéristiques du candidat, les différents niveaux de connaissances, de savoir-faire, d’expériences professionnelles ou de fonctions exercées nécessaires pour suivre efficacement une formation déterminée"
+				}
+			],
+			"domain": [
+				"nfr:ConditionDAcces"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "prérequis"
+				}
+			],
+			"range": [
+				"nfr:Prerequis"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "L'offre de formation BTS SIO peut être reliée vers un prérequis représentant l'obtention d'un bac"
+				}
+			],
+			"notation": [
+				"SED030031001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:programme",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Contenu de la formation"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "programme"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"SED100003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:programmeRef",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique l'url vers d'un document qui propose notamment le référentiel de formation"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "programme_ref"
+				}
+			],
+			"range": [
+				"xsd:anyURI",
+				"sch:Text",
+				"nfr:SpecialCase"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "https://lycee-flaubert-rouen.fr/app/media/uploads/images/bootstrap-builder/DiapoSIODRCertav2_DR_VEM.pdf"
+				}
+			],
+			"notation": [
+				"SED100004"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:providesAMeasurementOf",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association between an evaluation or assessment process and a\ncompetency."
+				}
+			],
+			"domain": [
+				"nfr:EvaluationAssessmentProcess"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "provides a measurement of"
+				}
+			],
+			"range": [
+				"nfr:Competency"
+			],
+			"notation": [
+				"DES0009"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:providesConsistencyTo",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of a competency and a role."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "provides consistency to"
+				}
+			],
+			"range": [
+				"nfr:Role"
+			],
+			"notation": [
+				"DES0017"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:publicCible",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Public prioritairement concerné par l'action de formation"
+				}
+			],
+			"domain": [
+				"nfr:ActionDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "public cible"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "La valeur de cette propriété est une instance de la classe RC0019 (Codification) qui indique le public cible de l'action de formation, par exemple la valeur 80006 (demandeur d'emploi) de formacode"
+				}
+			],
+			"notation": [
+				"SED101019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:raisonSociale",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique la raison sociale de l'institution"
+				}
+			],
+			"domain": [
+				"nfr:Institution"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "raison sociale"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"SED007007"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:realise",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "La réalisation d'un parcours de formation spécifie les éléments de mise en oeuvre (réalisation) d'un parcours de formation"
+				},
+				{
+					"@language": "fr",
+					"@value": "La réalisation d'un module de formation spécifie les éléments de mise en oeuvre (réalisation) d'un module de formation"
+				},
+				{
+					"@language": "fr",
+					"@value": "La réalisation d'une session de formation spécifie les éléments de mise en œuvre (réalisation) d'une session de formation"
+				},
+				{
+					"@language": "fr",
+					"@value": "La réalisation d'une activité pédagogique sur une offre de formation spécifie les éléments de mise en œuvre (réalisation) d'une activité pédagogique"
+				}
+			],
+			"domain": [
+				"nfr:RealisationDeParcours",
+				"nfr:RealisationDeModule",
+				"nfr:SessionDeFormation",
+				"nfr:RealisationDActivitePedagogique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "réalise"
+				}
+			],
+			"range": [
+				"nfr:ActionDeFormation",
+				"nfr:Module",
+				"nfr:ElementDeFormation",
+				"nfr:RealisationDActivitePedagogique"
+			],
+			"notation": [
+				"SED201102001",
+				"SED202103001",
+				"SED203104001",
+				"SED204105001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:relatifA",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique qu'un nombre de crédits ECTS peut être relatif à une offre de formation, un parcours, un module, un élément de formation ou une activité pédagogique"
+				}
+			],
+			"domain": [
+				"nfr:CreditsEcts"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "relatif à"
+				}
+			],
+			"range": [
+				"nfr:Formation"
+			],
+			"notation": [
+				"SED070101001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:requires",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an action with a competency."
+				}
+			],
+			"domain": [
+				"nfr:Action"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "requires"
+				}
+			],
+			"range": [
+				"nfr:Competency"
+			],
+			"notation": [
+				"DES0006"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:ressource",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Lien vers des ressources en rapport avec l'offre de formation"
+				},
+				{
+					"@language": "fr",
+					"@value": "Ressources utilisées dans le cadre de cette formation"
+				}
+			],
+			"domain": [
+				"nfr:OffreDeFormation",
+				"nfr:FormationGenerique"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "ressource"
+				}
+			],
+			"range": [
+				"xsd:anyURI",
+				"sch:Text",
+				"nfr:SpecialCase",
+				"nfr:LearningResource"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "https://www.education.gouv.fr/bo/2011/22/esrs1108973a.htm"
+				}
+			],
+			"notation": [
+				"SED020005",
+				"SED05002001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:rythme",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Rythme de la formation (temps, partiel, etc.)"
+				}
+			],
+			"domain": [
+				"nfr:ActionDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "rythme"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"SED101001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:scenarioCondition",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a condition to a Competency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Scenario - Condition"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3014"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:scenarioPerformanceProcess",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a performance process to a Competency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Scenario - Performance Process"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3011"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:scenarioPrerequisite",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a prerequisite to a Competency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Scenario - Prerequisite"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3013"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:scenarioPurpose",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a purpose to a Competency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Scenario - Purpose"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3012"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:scenarioRelevantKnowledge",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a piece of knowledge required by a\nCompetency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Scenario - Relevant Knowledge"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3010"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:scenarioResource",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a resource to an action."
+				}
+			],
+			"domain": [
+				"nfr:Action"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Scenario - Resource"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES1002"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:scenarioTask",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a task to an action."
+				}
+			],
+			"domain": [
+				"nfr:Action"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Scenario - Task"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES1003"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:scenarioTool",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a tool to an Action."
+				}
+			],
+			"domain": [
+				"nfr:Action"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Scenario - Tool"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES1001"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:seComposeDe",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique les modules dans lesquels se décline l'action de formation"
+				},
+				{
+					"@language": "fr",
+					"@value": "Indique les modules / unités se composent de parcours de formation"
+				}
+			],
+			"domain": [
+				"nfr:ActionDeFormation",
+				"nfr:Parcours"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "se compose de"
+				}
+			],
+			"range": [
+				"nfr:Module"
+			],
+			"notation": [
+				"SED101103001",
+				"SED102103001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:seComposeDeLActivitePedagogique",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Permet de spécifier qu'un élément de formation est composé d'activités pédagogiques"
+				}
+			],
+			"domain": [
+				"nfr:ElementDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "se compose de l'activité pédagogique"
+				}
+			],
+			"range": [
+				"nfr:ActivitePedagogique"
+			],
+			"notation": [
+				"SED104105001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:seComposeHierarchiquementDuModule",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Permet de hiérarchiser les modules"
+				}
+			],
+			"domain": [
+				"nfr:Module"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "se compose hiérarchiquement du module"
+				}
+			],
+			"range": [
+				"nfr:Module"
+			],
+			"notation": [
+				"SED103103001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:seDeclineEn",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Une offre de formation se décline en une autre offre de formation pour par exemple préciser des options"
+				},
+				{
+					"@language": "fr",
+					"@value": "Indique les parcours dans lesquels se décline l'action de formation"
+				}
+			],
+			"domain": [
+				"nfr:OffreDeFormation",
+				"nfr:ActionDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "se décline en"
+				}
+			],
+			"range": [
+				"nfr:OffreDeFormation",
+				"nfr:Parcours"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "L'offre de formation BTS SIO peut être reliée à deux offres de formation représentant les options SISR et SLAM"
+				}
+			],
+			"notation": [
+				"SED020020001",
+				"SED101102001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:seDerouleEnAlternance",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique si la formation à lieu en alternance"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "se déroule en alternance"
+				}
+			],
+			"range": [
+				"nfr:Alternance"
+			],
+			"notation": [
+				"SED100042001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:shows",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an actor to the demonstration of a competency\nthrough behaviour or achievement."
+				}
+			],
+			"domain": [
+				"nfr:Actor"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "shows"
+				}
+			],
+			"range": [
+				"nfr:Competency"
+			],
+			"notation": [
+				"DES0001"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:siret",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Système d'Identification du Répertoire des Eablissements sur le Territoire: permet d’identifier chaque établissement qui compose une entreprise"
+				}
+			],
+			"domain": [
+				"nfr:Institution"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "SIRET"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"notation": [
+				"SED007004"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:situationalCriteria",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of criteria to a Competency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Situational - Criteria"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3017"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:situationalLevel",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a level to a Competency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Situational - Level"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3016"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:situationalRelatedCompetency",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Assigns the description of a related competency to a Competency."
+				}
+			],
+			"domain": [
+				"nfr:Competency"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "Situational - Related Competency"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"DES3015"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:stage",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique les stages prévus dans le référentiel de formation"
+				}
+			],
+			"domain": [
+				"nfr:OffreDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "stage"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Par exemple \"Pour le BTS SIO il y a deux stages obligatoires, l'un en fin de première année (4 à 5 semaines consécutives) et l'autre en fin de cursus (5 à 6 semaines consécutives), en tout 10 semaines\""
+				}
+			],
+			"notation": [
+				"SED020002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:tarif",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Tarifs de la formation"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "tarif"
+				}
+			],
+			"range": [
+				"nfr:FraisDeFormation"
+			],
+			"notation": [
+				"SED100040001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:tauxTva",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Taux de TVA appliquée pour l'élément de formation"
+				}
+			],
+			"domain": [
+				"nfr:FraisDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "taux TVA"
+				}
+			],
+			"range": [
+				"xsd:float",
+				"sch:Integer"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "0"
+				}
+			],
+			"notation": [
+				"SED040003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:tempsCentre",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Nombre d'unités de temps en centre"
+				}
+			],
+			"domain": [
+				"nfr:Alternance"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "temps centre"
+				}
+			],
+			"range": [
+				"xsd:duration",
+				"sch:Duration"
+			],
+			"notation": [
+				"SED042002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:transport",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Information concernant le transport organisé spécifiquement pour la formation"
+				}
+			],
+			"domain": [
+				"nfr:Realisation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "transport"
+				}
+			],
+			"range": [
+				"rdf:langString",
+				"sch:Text"
+			],
+			"notation": [
+				"SED200002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:type",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "type de la codification"
+				},
+				{
+					"@language": "fr",
+					"@value": "Indique à quel type, catégorie nationale de formation, la formation appartient"
+				},
+				{
+					"@language": "fr",
+					"@value": "type d'équipement"
+				}
+			],
+			"domain": [
+				"nfr:Codification",
+				"nfr:OffreDeFormation",
+				"nfr:Equipement"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "type"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text",
+				"nfr:SpecialCase",
+				"nfr:Codification"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "http://lheo.gouv.fr/2.3/lheo/dict-niveaux.html"
+				},
+				{
+					"@language": "fr",
+					"@value": "L'Onisep dispose d'une liste de types de formation avec la formation initiale, type de formation en cours, hiérarchisée en 3 niveaux avec des redondances (un type peut apparaître à plusieurs endroits de la hiérarchie)"
+				}
+			],
+			"notation": [
+				"SED019002",
+				"SED020001",
+				"SED043019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:typeDeParcours",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique le type de parcours"
+				}
+			],
+			"domain": [
+				"nfr:Formation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "type de parcours"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED100019002"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:typeDuPerimetre",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "La valeur de cette propriété est une instance de la classe RC0019 (Codification)  qui définit le périmètre de recrutement d'une personne qui va suivre la formation"
+				}
+			],
+			"domain": [
+				"nfr:PerimetreDeRecrutement"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "type du périmètre"
+				}
+			],
+			"range": [
+				"nfr:Codification"
+			],
+			"notation": [
+				"SED044019001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:uses",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "en",
+					"@value": "Association of an evaluation or an assessment process with criteria\nand methods."
+				}
+			],
+			"domain": [
+				"nfr:EvaluationAssessmentProcess"
+			],
+			"label": [
+				{
+					"@language": "en",
+					"@value": "uses"
+				}
+			],
+			"range": [
+				"nfr:CriteriaAndMethod"
+			],
+			"notation": [
+				"DES0007"
+			],
+			"status": [
+				"A relire"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:utilise",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique que l'action de formation utilise jusqu'à trois types compositions"
+				},
+				{
+					"@language": "fr",
+					"@value": "Indique qu'un parcours peut utiliser une composition spécifique (compositions obligatoires, optionnelles ou à choix) d'éléments de formation"
+				},
+				{
+					"@language": "fr",
+					"@value": "Indique qu'un module utilise une composition spécifique (compositions obligatoires, optionnelles ou à choix) d'éléments de formation"
+				},
+				{
+					"@language": "fr",
+					"@value": "permet de hirérachiser les éléments de formation à l'aide de composition obligatoire, optionnelle ou à choix"
+				}
+			],
+			"domain": [
+				"nfr:ActionDeFormation",
+				"nfr:Parcours",
+				"nfr:Module",
+				"nfr:ElementDeFormation"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "utilise"
+				}
+			],
+			"range": [
+				"nfr:Composition",
+				"nfr:ElementDeFormation"
+			],
+			"notation": [
+				"SED101104001",
+				"SED102060001",
+				"SED103060001",
+				"SED104060001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:vend",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique qu'une institution vend une réalisation d'action de formation qui peut se décliner en réalisation d'un parcours, d'un module, d'un élément de formation ou d'une activité pédagogique"
+				}
+			],
+			"domain": [
+				"nfr:Institution"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "vend"
+				}
+			],
+			"range": [
+				"nfr:Realisation"
+			],
+			"notation": [
+				"SED007200001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:vendPropose",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "Indique qu'une institution vend ou propose une action de formation qui peut se décliner en un parcours, un module, un élément de formation ou une activité pédagogique"
+				}
+			],
+			"domain": [
+				"nfr:Institution"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "vend, propose"
+				}
+			],
+			"range": [
+				"nfr:Formation"
+			],
+			"notation": [
+				"SED007100001"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:version",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "version du type de la codification utilisée"
+				}
+			],
+			"domain": [
+				"nfr:Codification"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "version"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "2.3"
+				}
+			],
+			"notation": [
+				"SED019003"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:ville",
+			"type": [
+				"rdf:Property"
+			],
+			"comment": [
+				{
+					"@language": "fr",
+					"@value": "indique la ville de l'adresse"
+				}
+			],
+			"domain": [
+				"nfr:SitePhysiqueAdresse"
+			],
+			"label": [
+				{
+					"@language": "fr",
+					"@value": "ville"
+				}
+			],
+			"range": [
+				"xsd:string",
+				"sch:Text"
+			],
+			"example": [
+				{
+					"@language": "fr",
+					"@value": "Rouen"
+				}
+			],
+			"notation": [
+				"SED094004"
+			],
+			"status": [
+				"Relecture ok"
+			],
+			"inScheme": [
+				"nfr:scheme_for_Property_generated"
+			]
+		},
+		{
+			"id": "nfr:scheme_for_Class_generated",
+			"type": [
+				"skos:ConceptScheme",
+				"om:defaultScheme"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "Default scheme for Class - autogenerated"
+				},
+				{
+					"@language": "fr",
+					"@value": "Scheme par défault pour les Class - autogenéré"
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "Default Level"
+				},
+				{
+					"@language": "fr",
+					"@value": "Niveau par défaut"
+				}
+			]
+		},
+		{
+			"id": "nfr:scheme_for_Property_generated",
+			"type": [
+				"skos:ConceptScheme",
+				"om:defaultScheme"
+			],
+			"description": [
+				{
+					"@language": "en",
+					"@value": "Default scheme for Property - autogenerated"
+				},
+				{
+					"@language": "fr",
+					"@value": "Scheme par défault pour les Property - autogenéré"
+				}
+			],
+			"title": [
+				{
+					"@language": "en",
+					"@value": "Default Level"
+				},
+				{
+					"@language": "fr",
+					"@value": "Niveau par défaut"
+				}
+			]
+		}
+	]
+}
