@@ -456,7 +456,7 @@
     },
     "graph": [
         {
-            "id": "gendj:genTermTypes",
+            "id": "gendj:exampleType",
             "type": [
                 "owl:Class",
                 "rdfs:Class"
@@ -464,12 +464,12 @@
             "label": [
                 {
                     "@language": "en",
-                    "@value": "genTermTypes"
+                    "@value": "Example id ends with 'Types'"
                 }
             ]
         },
         {
-            "id": "gendj:genTermTypesZ",
+            "id": "gendj:exampleTypesZ",
             "type": [
                 "owl:Class",
                 "rdfs:Class"
@@ -477,8 +477,21 @@
             "label": [
                 {
                     "@language": "en",
-                    "@value": "genTermTypes"
+                    "@value": "Example id not ends with 'Types'"
                 }
+            ]
+        },
+        {
+            "id": "gendj:example-property-middle-dash",
+            "type": [
+                "rdf:Property"
+            ],
+            "label": "label",
+            "domain": [
+                "gendj:exampleTypesZ"
+            ],
+            "range": [
+                "xsd:string"
             ]
         }
     ]
